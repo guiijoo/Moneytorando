@@ -8,11 +8,11 @@
     tools:context=".login">
 
     <Button
-        android:theme="@style/Theme.Teste"
         android:id="@+id/button2"
         android:layout_width="118dp"
         android:layout_height="56dp"
-        android:text="Button"
+        android:text="Entrar"
+        android:theme="@style/Theme.Teste"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -6,13 +6,102 @@
     android:layout_height="match_parent"
     tools:context=".Menu_Principal">
 
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/view2"
+        android:layout_width="432dp"
+        android:layout_height="402dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/fundo_moneytorando_login4"
+            android:layout_width="match_parent"
+            android:layout_height="413dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FF0000" />
+
+        <Button
+            android:id="@+id/menu_atalho"
+            android:layout_width="81dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="51dp"
+            android:layout_marginBottom="160dp"
+            android:textSize="24sp"
+            android:theme="@style/Theme.Teste"
+            app:icon="@drawable/barras_menu"
+            app:layout_anchor="@+id/fundo_moneytorando_login4"
+            app:layout_anchorGravity="start|top" />
+
+        <Button
+            android:id="@+id/menu_configurar"
+            android:layout_width="77dp"
+            android:layout_height="93dp"
+            android:textSize="24sp"
+            android:layout_marginRight="10dp"
+            android:theme="@style/Theme.Teste"
+            app:icon="@drawable/configurar_menu"
+            app:layout_anchor="@+id/fundo_moneytorando_login4"
+            app:layout_anchorGravity="end|top" />
+
+        <ImageView
+
+            android:id="@+id/foto_perfil"
+            android:layout_width="133dp"
+            android:layout_height="147dp"
+            app:layout_anchor="@+id/fundo_moneytorando_login4"
+            app:layout_anchorGravity="center"
+            app:srcCompat="@drawable/foto_perfil" />
+
+        <TextView
+            android:id="@+id/nome_usuario_txt"
+            android:layout_width="215dp"
+            android:layout_height="122dp"
+            android:layout_marginBottom="55dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="Nome_Usuario"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_anchor="@+id/fundo_moneytorando_login4"
+            app:layout_anchorGravity="bottom|center" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/titulo_historico_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Menu Principal"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Historico"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.085" />
+
+    <ScrollView
+        android:id="@+id/list_historico"
+        android:layout_width="388dp"
+        android:layout_height="287dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/titulo_historico_txt">
+
+
+        <TextView
+            android:id="@+id/Item_dado_historico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Dado do historico do usuario"
+            android:textAlignment="center" />
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
