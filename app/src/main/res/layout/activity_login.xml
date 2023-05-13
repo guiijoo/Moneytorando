@@ -8,7 +8,7 @@
     tools:context=".login">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/entrar_btn"
         android:layout_width="118dp"
         android:layout_height="56dp"
         android:text="Entrar"

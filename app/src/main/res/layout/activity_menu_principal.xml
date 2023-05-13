@@ -8,8 +8,8 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/view2"
-        android:layout_width="432dp"
-        android:layout_height="402dp"
+        android:layout_width="412dp"
+        android:layout_height="407dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -20,9 +20,11 @@
         <ImageView
             android:id="@+id/fundo_moneytorando_login4"
             android:layout_width="match_parent"
-            android:layout_height="413dp"
+            android:layout_height="417dp"
             android:layout_marginBottom="10dp"
-            android:background="#FF0000" />
+            android:background="#FF0000"
+            app:layout_anchor="@+id/fundo_moneytorando_login4"
+            app:layout_anchorGravity="center" />
 
         <Button
             android:id="@+id/menu_atalho"
@@ -41,8 +43,8 @@
             android:id="@+id/menu_configurar"
             android:layout_width="77dp"
             android:layout_height="93dp"
-            android:textSize="24sp"
             android:layout_marginRight="10dp"
+            android:textSize="24sp"
             android:theme="@style/Theme.Teste"
             app:icon="@drawable/configurar_menu"
             app:layout_anchor="@+id/fundo_moneytorando_login4"
@@ -75,24 +77,28 @@
         android:id="@+id/titulo_historico_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Historico"
+        android:textAlignment="center"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2"
-        app:layout_constraintVertical_bias="0.085" />
+        app:layout_constraintVertical_bias="0.065" />
 
     <ScrollView
         android:id="@+id/list_historico"
-        android:layout_width="388dp"
-        android:layout_height="287dp"
+        android:layout_width="411dp"
+        android:layout_height="170dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_historico_txt">
+        app:layout_constraintTop_toBottomOf="@+id/titulo_historico_txt"
+        app:layout_constraintVertical_bias="1.0">
 
 
         <TextView
