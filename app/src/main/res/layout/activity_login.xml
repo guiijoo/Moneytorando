@@ -9,19 +9,22 @@
 
     <Button
         android:id="@+id/entrar_btn"
-        android:layout_width="118dp"
-        android:layout_height="56dp"
+        android:layout_width="113dp"
+        android:layout_height="42dp"
         android:text="Entrar"
+        android:textSize="16sp"
         android:theme="@style/Theme.Teste"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usuario_senha_txt" />
+        app:layout_constraintTop_toBottomOf="@+id/usuario_senha_txt"
+        app:layout_constraintVertical_bias="0.125" />
 
     <ImageView
         android:id="@+id/fundo_moneytorando_login"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="413dp"
+        android:layout_height="363dp"
         android:layout_marginBottom="360dp"
         android:background="#FF0000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,13 +36,13 @@
 
     <ImageView
         android:id="@+id/logo_moneytorando_login"
-        android:layout_width="209dp"
-        android:layout_height="191dp"
+        android:layout_width="167dp"
+        android:layout_height="147dp"
         app:layout_constraintBottom_toBottomOf="@+id/fundo_moneytorando_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fundo_moneytorando_login"
-        app:layout_constraintVertical_bias="0.441"
+        app:layout_constraintVertical_bias="0.333"
         app:srcCompat="@drawable/logo_branca_money" />
 
     <TextView
@@ -59,19 +62,6 @@
         app:layout_constraintTop_toBottomOf="@+id/logo_moneytorando_login"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/texto_bem_vindo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Seja Bem-vindo"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/logo_moneytorando_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/usuario_login_txt"
         android:layout_width="343dp"
@@ -81,7 +71,7 @@
         android:cursorVisible="false"
         android:ems="10"
         android:fontFamily="sans-serif-smallcaps"
-        android:hint="Usuario"
+        android:hint="usuario"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="#FF0000"
@@ -111,6 +101,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usuario_login_txt" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="77dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Button"
+        android:textAlignment="center"
+        app:icon="@drawable/baseline_question_mark_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entrar_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
