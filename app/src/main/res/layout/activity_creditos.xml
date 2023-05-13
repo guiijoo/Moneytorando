@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".Creditos">
 
+    <Button
+        android:id="@+id/ajuda_principal_btn5"
+        android:layout_width="77dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textAlignment="center"
+        app:icon="@drawable/retornar_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entrar_login_btn"
+        app:layout_constraintVertical_bias="0.0" />
+
     <ImageView
         android:id="@+id/fundo_moneytorando_login2"
         android:layout_width="411dp"

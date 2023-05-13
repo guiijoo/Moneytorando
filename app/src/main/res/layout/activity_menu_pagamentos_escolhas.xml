@@ -7,6 +7,21 @@
     tools:context=".menu_pagamentos_escolhas">
 
     <Button
+        android:id="@+id/ajuda_principal_btn2"
+        android:layout_width="77dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textAlignment="center"
+        app:icon="@drawable/baseline_question_mark_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.981"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entrar_login_btn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
         android:id="@+id/menu_atalho_pagamento"
         android:layout_width="81dp"
         android:layout_height="93dp"
@@ -14,7 +29,11 @@
         android:theme="@style/Theme.Teste"
         app:icon="@drawable/barras_menu"
         app:layout_anchor="@+id/fundo_moneytorando_principal"
-        app:layout_anchorGravity="start|top" />
+        app:layout_anchorGravity="start|top"
+        app:layout_constraintBottom_toTopOf="@+id/foto_perfil_pagamento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/menu_configurar_pagamento"
@@ -25,13 +44,15 @@
         app:icon="@drawable/configurar_menu"
         app:layout_anchor="@+id/fundo_moneytorando_principal"
         app:layout_anchorGravity="end|top"
-        tools:layout_editor_absoluteX="335dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintBottom_toTopOf="@+id/dinheiro_usuario_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.013" />
 
     <ImageView
         android:id="@+id/fundo_moneytorando_pagamento"
-        android:layout_width="413dp"
-        android:layout_height="265dp"
+        android:layout_width="603dp"
+        android:layout_height="263dp"
         android:layout_marginBottom="360dp"
         android:background="#FF0000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,25 +62,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-
-        android:id="@+id/foto_perfil_pagamento"
-        android:layout_width="88dp"
-        android:layout_height="100dp"
-        app:layout_anchor="@+id/fundo_moneytorando_principal"
-        app:layout_anchorGravity="center"
-        app:srcCompat="@drawable/foto_perfil"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="127dp" />
-
     <Button
         android:id="@+id/retorno_pagamento_menu_btn"
         android:layout_width="256dp"
         android:layout_height="94dp"
         android:text="Botao_Retorno_Menu"
         app:icon="@drawable/retornar_icon"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/fundo_moneytorando_pagamento"
+        app:layout_constraintEnd_toStartOf="@+id/menu_configurar_pagamento"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toEndOf="@+id/menu_atalho_pagamento"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/dinheiro_usuario_txt"
@@ -69,150 +83,196 @@
         android:text="Dinheiro_Atual_Usuario"
         android:textColor="#FDFDFD"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="167dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/fundo_moneytorando_pagamento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/foto_perfil_pagamento"
+        app:layout_constraintTop_toBottomOf="@+id/retorno_pagamento_menu_btn" />
 
     <ImageView
         android:id="@+id/agua_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/agua_botao"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="283dp" />
+        tools:layout_editor_absoluteY="282dp" />
 
     <TextView
         android:id="@+id/pagamento_agua_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
         android:text="Agua"
-        app:layout_constraintTop_toBottomOf="@+id/agua_image"
-        tools:layout_editor_absoluteX="39dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agua_image" />
 
     <ImageView
         android:id="@+id/energia_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/gas_image"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toEndOf="@+id/agua_image"
         app:srcCompat="@drawable/energia_botao"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="282dp" />
+        tools:layout_editor_absoluteY="281dp" />
 
     <TextView
         android:id="@+id/pagamento_energia_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Energia"
-        app:layout_constraintTop_toBottomOf="@+id/energia_image"
-        tools:layout_editor_absoluteX="179dp" />
+        app:layout_constraintEnd_toStartOf="@+id/pagamento_gas_txt"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_agua_txt"
+        app:layout_constraintTop_toBottomOf="@+id/energia_image" />
 
     <ImageView
         android:id="@+id/gas_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/gas_botao"
-        tools:layout_editor_absoluteX="296dp"
         tools:layout_editor_absoluteY="282dp" />
 
     <TextView
         android:id="@+id/pagamento_gas_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
         android:text="Gas"
-        app:layout_constraintTop_toBottomOf="@+id/gas_image"
-        tools:layout_editor_absoluteX="328dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gas_image" />
 
     <ImageView
         android:id="@+id/shopping_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
-        app:srcCompat="@drawable/shopping_botao"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="394dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_agua_txt"
+        app:srcCompat="@drawable/shopping_botao" />
 
     <TextView
         android:id="@+id/pagamento_shopping_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
         android:text="Shopping"
-        app:layout_constraintTop_toBottomOf="@+id/shopping_image"
-        tools:layout_editor_absoluteX="35dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shopping_image" />
 
     <ImageView
         android:id="@+id/cartao_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
-        app:srcCompat="@drawable/cartao_credito_botao"
-        tools:layout_editor_absoluteX="296dp"
-        tools:layout_editor_absoluteY="394dp" />
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_gas_txt"
+        app:srcCompat="@drawable/cartao_credito_botao" />
 
     <TextView
         android:id="@+id/pagamento_cartao_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cartão de Crédito"
-        app:layout_constraintTop_toBottomOf="@+id/cartao_image"
-        tools:layout_editor_absoluteX="285dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cartao_image" />
 
     <ImageView
         android:id="@+id/telefone_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
-        app:srcCompat="@drawable/telefone_botao"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="394dp" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/cartao_image"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toEndOf="@+id/shopping_image"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_energia_txt"
+        app:srcCompat="@drawable/telefone_botao" />
 
     <TextView
         android:id="@+id/pagamento_telefone_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Telefone"
-        app:layout_constraintTop_toBottomOf="@+id/telefone_image"
-        tools:layout_editor_absoluteX="174dp" />
+        app:layout_constraintEnd_toStartOf="@+id/pagamento_cartao_txt"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_shopping_txt"
+        app:layout_constraintTop_toBottomOf="@+id/telefone_image" />
 
     <ImageView
         android:id="@+id/seguranca_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
-        app:srcCompat="@drawable/seguranca_botao"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="514dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_shopping_txt"
+        app:srcCompat="@drawable/seguranca_botao" />
 
     <TextView
         android:id="@+id/pagamento_seguranca_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
         android:text="Segurança"
-        app:layout_constraintTop_toBottomOf="@+id/seguranca_image"
-        tools:layout_editor_absoluteX="27dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seguranca_image" />
 
     <ImageView
         android:id="@+id/moradia_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
-        app:srcCompat="@drawable/moradia_botao"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="514dp" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/outros_image"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toEndOf="@+id/seguranca_image"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_telefone_txt"
+        app:srcCompat="@drawable/moradia_botao" />
 
     <TextView
         android:id="@+id/pagamento_moradia_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Moradia"
-        app:layout_constraintTop_toBottomOf="@+id/moradia_image"
-        tools:layout_editor_absoluteX="174dp" />
+        app:layout_constraintEnd_toStartOf="@+id/pagamento_outros_txt"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_seguranca_txt"
+        app:layout_constraintTop_toBottomOf="@+id/moradia_image" />
 
     <ImageView
         android:id="@+id/outros_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
-        app:srcCompat="@drawable/outros_botao"
-        tools:layout_editor_absoluteX="296dp"
-        tools:layout_editor_absoluteY="514dp" />
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_cartao_txt"
+        app:srcCompat="@drawable/outros_botao" />
 
     <TextView
         android:id="@+id/pagamento_outros_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
         android:text="Outros"
-        app:layout_constraintTop_toBottomOf="@+id/outros_image"
-        tools:layout_editor_absoluteX="319dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outros_image" />
+
+    <ImageView
+
+        android:id="@+id/foto_perfil_pagamento"
+        android:layout_width="88dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="36dp"
+        app:layout_anchor="@+id/fundo_moneytorando_principal"
+        app:layout_anchorGravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/fundo_moneytorando_pagamento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/retorno_pagamento_menu_btn"
+        app:layout_constraintVertical_bias="0.464"
+        app:srcCompat="@drawable/foto_perfil" />
 </androidx.constraintlayout.widget.ConstraintLayout>
