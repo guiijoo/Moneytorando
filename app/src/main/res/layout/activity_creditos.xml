@@ -7,7 +7,7 @@
     tools:context=".Creditos">
 
     <Button
-        android:id="@+id/ajuda_principal_btn5"
+        android:id="@+id/ajuda_creditos_btn"
         android:layout_width="77dp"
         android:layout_height="60dp"
         android:layout_marginTop="35dp"

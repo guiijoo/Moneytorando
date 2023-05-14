@@ -7,11 +7,12 @@
     tools:context=".menu_pagamentos_escolhas">
 
     <Button
-        android:id="@+id/ajuda_principal_btn2"
+        android:id="@+id/ajuda_pagamento_btn"
         android:layout_width="77dp"
         android:layout_height="60dp"
         android:layout_marginTop="35dp"
         android:fontFamily="sans-serif-smallcaps"
+        android:onClick="BotaoAjuda_pagamentos"
         android:textAlignment="center"
         app:icon="@drawable/baseline_question_mark_24"
         app:layout_constraintBottom_toBottomOf="parent"

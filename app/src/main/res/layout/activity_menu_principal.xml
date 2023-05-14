@@ -7,11 +7,12 @@
     tools:context=".Menu_Principal">
 
     <Button
-        android:id="@+id/ajuda_principal_btn4"
+        android:id="@+id/ajuda_principal_btn"
         android:layout_width="77dp"
         android:layout_height="60dp"
         android:layout_marginTop="35dp"
         android:fontFamily="sans-serif-smallcaps"
+        android:onClick="BotaoAjuda_principal"
         android:textAlignment="center"
         app:icon="@drawable/baseline_question_mark_24"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -95,6 +96,18 @@
             android:textSize="20sp"
             app:layout_anchor="@+id/fundo_moneytorando_principal"
             app:layout_anchorGravity="bottom|center" />
+
+        <TextView
+            android:id="@+id/dinheiro_atual_principal_txt"
+            android:layout_width="215dp"
+            android:layout_height="122dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="Dinheiro_atual"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_anchor="@+id/logo_fundo_principal"
+            app:layout_anchorGravity="top|center" />
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
