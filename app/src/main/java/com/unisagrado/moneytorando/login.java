@@ -31,11 +31,10 @@ public class login extends AppCompatActivity {
             public void onClick(View view) {
                 String usuario = editTextUsuario.getText().toString();
                 String senha = editTextSenha.getText().toString();
-                Intent intent = new Intent(login.this, Creditos.class);
+                Intent intent = new Intent(login.this, MainActivity.class);
                 intent.putExtra("usuario", usuario);
                 intent.putExtra("senha", senha);
                 startActivity(intent);
-
             }
         });
 

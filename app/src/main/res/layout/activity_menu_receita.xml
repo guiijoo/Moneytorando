@@ -42,7 +42,9 @@
         android:theme="@style/Theme.Teste"
         app:icon="@drawable/barras_menu"
         app:layout_anchor="@+id/fundo_moneytorando_principal"
-        app:layout_anchorGravity="start|top" />
+        app:layout_anchorGravity="start|top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/menu_configurar_receita"
@@ -53,8 +55,8 @@
         app:icon="@drawable/configurar_menu"
         app:layout_anchor="@+id/fundo_moneytorando_principal"
         app:layout_anchorGravity="end|top"
-        tools:layout_editor_absoluteX="335dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintStart_toEndOf="@+id/retono_receita_menu_btn"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/retono_receita_menu_btn"
@@ -62,14 +64,16 @@
         android:layout_height="94dp"
         android:text="Botao_Retorno_Menu"
         app:icon="@drawable/retornar_icon"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintStart_toEndOf="@+id/menu_atalho_receita"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/receita_atual_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Receita Atual"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="160dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fundo_moneytorando_login6" />
 </androidx.constraintlayout.widget.ConstraintLayout>

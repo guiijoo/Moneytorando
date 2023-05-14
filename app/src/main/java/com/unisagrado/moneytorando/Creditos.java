@@ -18,11 +18,6 @@ public class Creditos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creditos);
-
-        editTextUsuario = findViewById(R.id.editTextUsuario);
-        editTextSenha = findViewById(R.id.editTextSenha);
-        buttonAvancar = findViewById(R.id.buttonAvancar);
-
         buttonAvancar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
