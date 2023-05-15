@@ -15,9 +15,6 @@
             android:name=".inicial"
             android:exported="false" />
         <activity
-            android:name=".Creditos"
-            android:exported="false" />
-        <activity
             android:name=".menu_pagamentos_escolhas"
             android:exported="false" />
         <activity

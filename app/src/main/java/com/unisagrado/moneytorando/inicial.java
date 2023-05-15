@@ -3,9 +3,12 @@ package com.unisagrado.moneytorando;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.NumberFormat;
 import java.util.Currency;
@@ -17,21 +20,30 @@ public class inicial extends AppCompatActivity {
     private TextView dados_historico_inicial_TextView;
     private TextView dinheiro_usuario;
     private String nome_usuarioS;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicial);
 
-
+        /*
         dados_historico_inicial_TextView = findViewById(R.id.dados_historico_inicial);
         if(dados_historico_inicial_TextView != null){
             dados_historico_inicial_TextView.setVisibility(View.VISIBLE);
         }else{
             dados_historico_inicial_TextView.setVisibility(View.INVISIBLE);
         }
+        */
 
-
+        /*button = findViewById(R.id.menu_atalho_inicial_btn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                exibirOpcoes();
+            }
+        });
+        */
         String nome_usuario = getIntent().getStringExtra("nome_usuario");
         nome_usuario_coletado = findViewById(R.id.nome_usuario_inicial_txt);
         nome_usuario_coletado.setText("Seja bem-vindo, "+nome_usuario+"!");
@@ -60,4 +72,5 @@ public class inicial extends AppCompatActivity {
         explicar.setMessage("Aqui Tem todos os seus dados senhor(a) "+nome_usuarioS+", embaixo terá seu historico de transações e pagamentos...para fechar clique fora do bloco!");
         explicar.create().show();
     }
-}
+
+    }
