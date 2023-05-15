@@ -13,23 +13,24 @@
         android:layout_marginTop="35dp"
         android:fontFamily="sans-serif-smallcaps"
         android:onClick="BotaoAjuda_pagamentos"
+        android:text="."
         android:textAlignment="center"
         app:icon="@drawable/baseline_question_mark_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.981"
+        app:layout_constraintHorizontal_bias="0.988"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/entrar_login_btn"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/menu_atalho_pagamento"
+        android:id="@+id/menu_atalho_pagamento_image"
         android:layout_width="81dp"
         android:layout_height="93dp"
+        android:text="."
         android:textSize="24sp"
         android:theme="@style/Theme.Teste"
         app:icon="@drawable/barras_menu"
-        app:layout_anchor="@+id/fundo_moneytorando_principal"
         app:layout_anchorGravity="start|top"
         app:layout_constraintBottom_toTopOf="@+id/foto_perfil_pagamento"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,13 +38,13 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/menu_configurar_pagamento"
+        android:id="@+id/menu_configurar_pagamento_image"
         android:layout_width="77dp"
         android:layout_height="93dp"
+        android:text="."
         android:textSize="24sp"
         android:theme="@style/Theme.Teste"
         app:icon="@drawable/configurar_menu"
-        app:layout_anchor="@+id/fundo_moneytorando_principal"
         app:layout_anchorGravity="end|top"
         app:layout_constraintBottom_toTopOf="@+id/dinheiro_usuario_txt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,9 +71,9 @@
         android:text="Botao_Retorno_Menu"
         app:icon="@drawable/retornar_icon"
         app:layout_constraintBottom_toBottomOf="@+id/fundo_moneytorando_pagamento"
-        app:layout_constraintEnd_toStartOf="@+id/menu_configurar_pagamento"
+        app:layout_constraintEnd_toStartOf="@+id/menu_configurar_pagamento_image"
         app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toEndOf="@+id/menu_atalho_pagamento"
+        app:layout_constraintStart_toEndOf="@+id/menu_atalho_pagamento_image"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -94,9 +95,10 @@
         android:layout_width="88dp"
         android:layout_height="82dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/agua_botao"
-        tools:layout_editor_absoluteY="282dp" />
+        app:layout_constraintTop_toBottomOf="@+id/fundo_moneytorando_pagamento"
+        app:srcCompat="@drawable/agua_botao" />
 
     <TextView
         android:id="@+id/pagamento_agua_txt"
@@ -111,12 +113,13 @@
         android:id="@+id/energia_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="48dp"
         app:layout_constraintEnd_toStartOf="@+id/gas_image"
-        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toEndOf="@+id/agua_image"
-        app:srcCompat="@drawable/energia_botao"
-        tools:layout_editor_absoluteY="281dp" />
+        app:layout_constraintTop_toBottomOf="@+id/fundo_moneytorando_pagamento"
+        app:srcCompat="@drawable/energia_botao" />
 
     <TextView
         android:id="@+id/pagamento_energia_txt"
@@ -132,10 +135,11 @@
         android:id="@+id/gas_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/gas_botao"
-        tools:layout_editor_absoluteY="282dp" />
+        app:layout_constraintTop_toBottomOf="@+id/fundo_moneytorando_pagamento"
+        app:srcCompat="@drawable/gas_botao" />
 
     <TextView
         android:id="@+id/pagamento_gas_txt"

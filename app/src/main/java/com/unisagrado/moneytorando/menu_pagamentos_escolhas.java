@@ -11,7 +11,7 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_pagamentos_escolhas);
+        setContentView(R.layout.activity_pagamentos);
     }
 
     public void BotaoAjuda_pagamentos(View view){

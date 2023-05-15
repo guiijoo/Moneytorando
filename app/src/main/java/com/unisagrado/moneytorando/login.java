@@ -31,8 +31,8 @@ public class login extends AppCompatActivity {
             public void onClick(View view) {
                 String usuario = editTextUsuario.getText().toString();
                 String senha = editTextSenha.getText().toString();
-                Intent intent = new Intent(login.this, MainActivity.class);
-                intent.putExtra("usuario", usuario);
+                Intent intent = new Intent(login.this, inicial.class);
+                intent.putExtra("nome_usuario", usuario);
                 intent.putExtra("senha", senha);
                 startActivity(intent);
             }
