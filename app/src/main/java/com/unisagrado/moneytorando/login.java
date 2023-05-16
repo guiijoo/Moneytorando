@@ -31,7 +31,7 @@ public class login extends AppCompatActivity {
             public void onClick(View view) {
                 String usuario = editTextUsuario.getText().toString();
                 String senha = editTextSenha.getText().toString();
-                Intent intent = new Intent(login.this, finalizacao.class);
+                Intent intent = new Intent(login.this, menu_pagamentos_escolhas.class);
                 intent.putExtra("nome_usuario", usuario);
                 intent.putExtra("senha", senha);
                 startActivity(intent);
@@ -43,7 +43,7 @@ public class login extends AppCompatActivity {
     public void BotaoAjuda_login(View view){
         AlertDialog.Builder explicar = new AlertDialog.Builder(login.this);
         explicar.setTitle("Explicação !");
-        explicar.setMessage("Aqui será feito seu login do usuario, coloquei sua senha e nome de usuario para conseguir acessar sua conta, qualquer duvida entre em contato com os desenvolvedores para saber melhor as funções...para sair clique para fora dele dialogo!");
+        explicar.setMessage("Aqui será feito seu login do usuario, coloquei sua senha e nome de usuario para conseguir acessar sua conta, qualquer duvida entre em contato com os desenvolvedores para saber melhor as funções...para sair clique fora desse bloco!");
         explicar.create().show();
     }
 }

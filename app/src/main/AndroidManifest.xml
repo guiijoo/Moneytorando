@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Moneytorando"
         tools:targetApi="31">
         <activity
-            android:name=".finalizacao"
+            android:name=".creditos"
             android:exported="false" />
         <activity
             android:name=".inicial"

@@ -69,7 +69,7 @@ public class inicial extends AppCompatActivity {
     public void BotaoAjuda_principal(View view){
        AlertDialog.Builder explicar = new AlertDialog.Builder(inicial.this);
         explicar.setTitle("Explicação !");
-        explicar.setMessage("Aqui Tem todos os seus dados senhor(a) "+nome_usuarioS+", embaixo terá seu historico de transações e pagamentos...para fechar clique fora do bloco!");
+        explicar.setMessage("Aqui Tem todos os seus dados senhor(a) "+nome_usuarioS+", embaixo terá seu historico de transações e pagamentos...para sair clique fora desse bloco!");
         explicar.create().show();
     }
 
