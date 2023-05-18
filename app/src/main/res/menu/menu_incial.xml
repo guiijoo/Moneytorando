@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/goCreditos"
+        android:icon="@drawable/home_icon_black"
+        android:title="Creditos" />
+
+<item
+    android:id="@+id/goInicial"
+    android:title="Inicial"
+    />
+
+<item
+    android:id="@+id/goPagamentos"
+    android:title="Menu de Pagamentos"
+    />
+
+<item
+    android:id="@+id/goReceita"
+    android:title="Menu de Receitas"
+    />
+
+
+</menu>

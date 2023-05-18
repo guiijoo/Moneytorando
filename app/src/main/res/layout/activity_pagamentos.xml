@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu_pagamentos_escolhas">
+    tools:context=".menu_pagamentos_escolhas"
+    tools:menu="@menu/menu_incial">
 
     <ImageView
         android:id="@+id/fundo_moneytorando_pagamento"
@@ -48,20 +49,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/menu_configurar_pagamento_image"
-        android:layout_width="77dp"
-        android:layout_height="93dp"
-        android:text="."
-        android:textSize="24sp"
-        android:theme="@style/Theme.Teste"
-        app:icon="@drawable/configurar_menu"
-        app:layout_anchorGravity="end|top"
-        app:layout_constraintBottom_toTopOf="@+id/dinheiro_usuario_txt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.013" />
 
     <TextView
         android:id="@+id/dinheiro_usuario_txt"
@@ -122,9 +109,9 @@
         android:id="@+id/seguranca_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
-        android:onClick="escolha_pagamento"
         android:layout_marginStart="28dp"
         android:layout_marginTop="8dp"
+        android:onClick="escolha_pagamento"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pagamento_shopping_txt"
         app:srcCompat="@drawable/seguranca_botao" />
@@ -164,8 +151,8 @@
         android:id="@+id/moradia_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
-        android:onClick="escolha_pagamento"
         android:layout_marginTop="8dp"
+        android:onClick="escolha_pagamento"
         app:layout_constraintEnd_toStartOf="@+id/outros_image"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toEndOf="@+id/seguranca_image"
@@ -208,9 +195,9 @@
         android:id="@+id/outros_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
-        android:onClick="escolha_pagamento"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
+        android:onClick="escolha_pagamento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pagamento_cartao_txt"
         app:srcCompat="@drawable/outros_botao" />
@@ -230,9 +217,9 @@
         android:id="@+id/cartao_image"
         android:layout_width="88dp"
         android:layout_height="82dp"
-        android:onClick="escolha_pagamento"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
+        android:onClick="escolha_pagamento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pagamento_gas_txt"
         app:srcCompat="@drawable/cartao_credito_botao" />
@@ -278,4 +265,17 @@
         app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/foto_perfil" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="100dp"
+        android:background="#FF0A0A"
+        android:cacheColorHint="#FFFFFF"
+        android:foregroundTint="#41000000"
+        android:headerDividersEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
