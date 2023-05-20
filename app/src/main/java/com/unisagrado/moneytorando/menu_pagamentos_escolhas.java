@@ -1,10 +1,14 @@
 package com.unisagrado.moneytorando;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class menu_pagamentos_escolhas extends AppCompatActivity {
@@ -17,6 +21,8 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
     private ImageView seguranca_image;
     private ImageView moradia_image;
     private ImageView outros_image;
+    private Button bt_menu_atalho_pagamento;
+    private Menu menu_inicial;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,16 +37,19 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
         moradia_image = findViewById(R.id.moradia_image);
         outros_image = findViewById(R.id.outros_image);
 
-
     }
-    /*View.OnClickListener imageViewClickListener = new View.OnClickListener(){
-        @Override
-        public void onClick(View view){
-            int id_escolha = view.getId();
-            processarImagemViewClicada(id_escolha);
-        }
-    };
-    */
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_incial, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
+
     public void processarImagemViewClicada(int id_escolha){
         switch(id_escolha){
             case R.id.agua_image:
