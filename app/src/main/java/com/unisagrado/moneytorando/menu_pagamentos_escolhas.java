@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,6 +24,7 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
     private ImageView outros_image;
     private Button bt_menu_atalho_pagamento;
     private Menu menu_inicial;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +49,17 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item)
+        {
+            case R.id.goCreditos:
+                Intent goCreditos = new Intent(menu_pagamentos_escolhas.this, creditos.class);
+                startActivity(goCreditos);
+                break;
+
+            case R.id.goInicial:
+                Intent goInicial = new Intent(menu_pagamentos_escolhas.this, inicial.class);
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
 
