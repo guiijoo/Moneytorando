@@ -4,6 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ClipData;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,7 +25,6 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
     private ImageView moradia_image;
     private ImageView outros_image;
     private Button bt_menu_atalho_pagamento;
-    private Menu menu_inicial;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +49,26 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if(id == R.id.goReceita)
+        {
+            Intent intent = new Intent(this, menu_receita.class);
+            startActivity(intent);
+            return true;
+        }else if(id == R.id.goCreditos)
+        {
+            Intent intent = new Intent(this, creditos.class);
+            startActivity(intent);
+            return true;
+        }else if(id == R.id.goInicial)
+        {
+            Intent intent = new Intent(this, inicial.class);
+            startActivity(intent);
+            return true;
+        }else if(id == R.id.goPagamentos)
+        {
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -120,4 +142,9 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
         processarImagemViewClicada(id_escolha);
     }
 
+    public void goCreditos()
+    {
+        Intent goCreditos = new Intent(menu_pagamentos_escolhas.this, creditos.class);
+        startActivity(goCreditos);
+    }
 }

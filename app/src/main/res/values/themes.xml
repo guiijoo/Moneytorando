@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Moneytorando" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.Moneytorando" parent="Theme.MaterialComponents.Light">
         <!-- Primary brand color. -->
         <item name="colorAccent">@color/sla</item>
         <item name="colorPrimary">#FE0000</item>
@@ -8,7 +8,7 @@
         <item name="android:statusBarColor">#FE0000</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="Theme.Teste" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.Teste" parent="Theme.MaterialComponents.Light">
         <!-- Primary brand color. -->
         <item name="colorAccent">@color/sla</item>
         <item name="colorPrimary">#FE0000</item>
