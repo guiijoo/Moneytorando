@@ -7,50 +7,40 @@
     tools:context=".creditos">
 
     <ImageView
-        android:id="@+id/fundo_logo_integrantes_image"
-        android:layout_width="190dp"
-        android:layout_height="177dp"
-        android:alpha="0.5"
-        android:src="@drawable/splashscreen"
-        app:layout_constraintBottom_toTopOf="@+id/fundo_colaboradores_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fundo_integrantes" />
-
-    <ImageView
-        android:id="@+id/fundo_logo_colaboradores_image"
-        android:layout_width="190dp"
-        android:layout_height="177dp"
-        android:alpha="0.5"
-        android:src="@drawable/splashscreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fundo_colaboradores_image" />
-
-    <ImageView
         android:id="@+id/fundo_colaboradores_image"
-        android:layout_width="411dp"
-        android:layout_height="119dp"
+        android:layout_width="418dp"
+        android:layout_height="70dp"
         android:layout_marginTop="148dp"
         android:background="#FF0000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fundo_integrantes"
-        app:layout_constraintVertical_bias="0.181"
+        app:layout_constraintVertical_bias="0.285"
         app:srcCompat="@drawable/fundo_vermelho" />
 
     <ImageView
         android:id="@+id/fundo_integrantes"
         android:layout_width="415dp"
-        android:layout_height="116dp"
+        android:layout_height="63dp"
         android:background="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/fundo_vermelho" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="398dp"
+        android:layout_height="329dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/logofacul2" />
 
     <TextView
         android:id="@+id/titulo_integrantes_txt"
@@ -81,6 +71,32 @@
         app:layout_constraintTop_toTopOf="@+id/fundo_colaboradores_image" />
 
     <TextView
+        android:id="@+id/nome_integrante_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Luís Guilherme Josepette Marchetto"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fundo_integrantes" />
+
+    <TextView
+        android:id="@+id/nome_integrante_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Eduardo Garcia Bonaci"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome_integrante_03" />
+
+    <TextView
         android:id="@+id/nome_integrante_03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -95,72 +111,44 @@
         app:layout_constraintTop_toBottomOf="@+id/nome_integrante_02" />
 
     <TextView
-        android:id="@+id/nome_integrante_04"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Eduardo Garcia Bonaci"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nome_integrante_03" />
-
-    <TextView
         android:id="@+id/nome_integrante_02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Luiz Fernando Marinho da Silva Bergaglia"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_integrante_01" />
-
-    <TextView
-        android:id="@+id/nome_integrante_01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Luís Guilherme Josepette Marchetto"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fundo_integrantes" />
 
     <TextView
         android:id="@+id/nome_integrante_05"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Fernando Toniza"
+        android:text="Fernando Nicoletti Toniza"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/fundo_colaboradores_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nome_integrante_04"
-        app:layout_constraintVertical_bias="0.447" />
+        app:layout_constraintTop_toBottomOf="@+id/nome_integrante_04" />
 
     <TextView
         android:id="@+id/nome_colaboradores_01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="116dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Elvio Gilberto da Silva"
+        android:text="Dr. Elvio Gilberto da Silva"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fundo_colaboradores_image" />
 
@@ -169,15 +157,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Fred Aparecido Matano (Professor colaborador)"
+        android:text="Me. Fred Aparecido Matano "
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_colaboradores_01"
-        app:layout_constraintVertical_bias="0.201" />
+        app:layout_constraintVertical_bias="0.612" />
 
     <Button
         android:id="@+id/button"
@@ -193,4 +181,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_colaboradores_02"
         app:layout_constraintVertical_bias="0.91" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

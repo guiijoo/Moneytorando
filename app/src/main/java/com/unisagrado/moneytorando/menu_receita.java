@@ -16,7 +16,7 @@ public class menu_receita extends AppCompatActivity {
     public void BotaoAjuda_receita(View view){
         AlertDialog.Builder explicar = new AlertDialog.Builder(menu_receita.this);
         explicar.setTitle("Explicação !");
-        explicar.setMessage("Aqui será aonde você vai pagar suas faturas, abaixo será demonstrado oque esta sendo cobrado e seus valores, clique no botão para fazer o pagamento...para sair clique fora desse bloco!");
+        explicar.setMessage("Aqui você ira colocar os valores de :taxas,investimentos,juros,parcerias. Agora coloque os valores de acordo com os dados da sua cidade...para sair clique fora desse bloco!");
         explicar.create().show();
     }
 }

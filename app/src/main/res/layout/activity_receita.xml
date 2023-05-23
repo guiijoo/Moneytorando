@@ -10,61 +10,109 @@
         android:id="@+id/ajuda_receita_btn"
         android:layout_width="77dp"
         android:layout_height="60dp"
-        android:layout_marginTop="35dp"
         android:fontFamily="sans-serif-smallcaps"
         android:textAlignment="center"
         app:icon="@drawable/baseline_question_mark_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintHorizontal_bias="0.961"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/entrar_login_btn"
-        app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/fundo_moneytorando_login6"
-        android:layout_width="417dp"
-        android:layout_height="88dp"
-        android:layout_marginBottom="360dp"
-        android:background="#FF0000"
+        />
+
+    <EditText
+        android:id="@+id/taxa_receita_txt"
+        android:layout_width="232dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="148dp"
+        android:background="@drawable/bordas_editadas"
+        android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="Taxa"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/investimento_receita_txt"
+        android:layout_width="232dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bordas_editadas"
+        android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="Investimento"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taxa_receita_txt" />
+
+    <EditText
+        android:id="@+id/juros_receita_txt"
+        android:layout_width="232dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bordas_editadas"
+        android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="Juros"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/investimento_receita_txt" />
+
+    <EditText
+        android:id="@+id/parcerias_receita_txt"
+        android:layout_width="232dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bordas_editadas"
+        android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="Parcerias"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/juros_receita_txt" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="164dp"
+        android:layout_height="58dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="pagar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parcerias_receita_txt"
+        app:layout_constraintVertical_bias="0.493" />
+
+    <TextView
+        android:id="@+id/total_pagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Total Pagar Conta"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/taxa_receita_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/menu_atalho_receita"
-        android:layout_width="81dp"
-        android:layout_height="93dp"
-        android:textSize="24sp"
-        android:theme="@style/Theme.Teste"
-        app:icon="@drawable/barras_menu"
-        app:layout_anchor="@+id/fundo_moneytorando_principal"
-        app:layout_anchorGravity="start|top"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/menu_configurar_receita"
-        android:layout_width="77dp"
-        android:layout_height="93dp"
-        android:textSize="24sp"
-        android:theme="@style/Theme.Teste"
-        app:icon="@drawable/configurar_menu"
-        app:layout_anchor="@+id/fundo_moneytorando_principal"
-        app:layout_anchorGravity="end|top"
-        app:layout_constraintStart_toEndOf="@+id/retono_receita_menu_btn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/retono_receita_menu_btn"
-        android:layout_width="256dp"
-        android:layout_height="94dp"
-        android:text="Botao_Retorno_Menu"
-        app:icon="@drawable/retornar_icon"
-        app:layout_constraintStart_toEndOf="@+id/menu_atalho_receita"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.416" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
