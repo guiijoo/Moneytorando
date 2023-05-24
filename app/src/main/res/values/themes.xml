@@ -16,10 +16,10 @@
         <item name="android:statusBarColor">#FE0000</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="Barramenu">
-        <item name="menu">
-            @drawable/barras_menu
-        </item>
 
+    <style name="Theme.Testing" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorAccent">@color/sla</item>
+        <item name="colorPrimary">#FE0000</item>
+        <item name="android:statusBarColor">#FE0000</item>
     </style>
 </resources>

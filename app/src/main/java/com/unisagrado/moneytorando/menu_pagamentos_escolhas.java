@@ -52,17 +52,6 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch(item)
-        {
-            case R.id.goCreditos:
-                Intent goCreditos = new Intent(menu_pagamentos_escolhas.this, creditos.class);
-                startActivity(goCreditos);
-                break;
-
-            case R.id.goInicial:
-                Intent goInicial = new Intent(menu_pagamentos_escolhas.this, inicial.class);
-                break;
-        }
         int id = item.getItemId();
         if(id == R.id.goReceita)
         {
@@ -154,11 +143,5 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
     public void escolha_pagamento(View view){
         int id_escolha = view.getId();
         processarImagemViewClicada(id_escolha);
-    }
-
-    public void goCreditos()
-    {
-        Intent goCreditos = new Intent(menu_pagamentos_escolhas.this, creditos.class);
-        startActivity(goCreditos);
     }
 }
