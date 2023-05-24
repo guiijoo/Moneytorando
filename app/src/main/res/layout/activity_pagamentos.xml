@@ -4,13 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbarThumbHorizontal="@drawable/barras_menu"
+    android:scrollbarThumbVertical="@drawable/barras_menu"
+    android:scrollbarTrackHorizontal="@drawable/barras_menu"
+    android:scrollbarTrackVertical="@drawable/barras_menu"
     tools:context=".menu_pagamentos_escolhas"
     tools:menu="@menu/menu_incial">
 
     <ImageView
         android:id="@+id/fundo_moneytorando_pagamento"
         android:layout_width="0dp"
-        android:layout_height="227dp"
+        android:layout_height="170dp"
         android:layout_marginBottom="360dp"
         android:background="#FF0000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,20 +38,6 @@
         app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pagamento_outros_txt"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/menu_atalho_pagamento_image"
-        android:layout_width="81dp"
-        android:layout_height="93dp"
-        android:text="."
-        android:textSize="24sp"
-        android:theme="@style/Theme.Teste"
-        app:icon="@drawable/barras_menu"
-        app:layout_anchorGravity="start|top"
-        app:layout_constraintBottom_toTopOf="@+id/foto_perfil_pagamento"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -258,13 +248,13 @@
         android:layout_height="100dp"
         android:layout_marginStart="48dp"
         android:layout_marginBottom="40dp"
-        app:layout_anchor="@+id/fundo_moneytorando_principal"
         app:layout_anchorGravity="center"
         app:layout_constraintBottom_toBottomOf="@+id/fundo_moneytorando_pagamento"
         app:layout_constraintEnd_toEndOf="@+id/fundo_moneytorando_pagamento"
         app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/foto_perfil" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
@@ -278,5 +268,6 @@
         app:layout_constraintTop_toBottomOf="@+id/fundo_moneytorando_pagamento"
         tools:itemCount="2"
         tools:listitem="1" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

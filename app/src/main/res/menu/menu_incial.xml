@@ -1,25 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    >
+<menu
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/goCreditos"
-        android:icon="@drawable/home_icon_black"
-        android:title="Creditos" />
+        android:title="menu"
+        android:id="@+id/menuTeste"
+        android:icon="@drawable/barras_menu"
+        app:showAsAction="always">
 
-<item
-    android:id="@+id/goInicial"
-    android:title="Inicial"
-    />
+        <menu>
+            <item
+                android:id="@+id/goCreditos"
+                android:title="Creditos"
+                android:icon="@drawable/baseline_info_24"/>
 
-<item
-    android:id="@+id/goPagamentos"
-    android:title="Menu de Pagamentos"
-    />
+            <item
+                android:id="@+id/goInicial"
+                android:title="Inicial"
+                android:icon="@drawable/home_icon_black"
+                />
 
-<item
-    android:id="@+id/goReceita"
-    android:title="Menu de Receitas"
-    />
+            <item
+                android:id="@+id/goPagamentos"
+                android:title="Menu de Pagamentos"
+                android:icon="@drawable/baseline_attach_money_24"
+                />
 
+            <item
+                android:id="@+id/goReceita"
+                android:title="Menu de Receitas"
+                android:icon="@drawable/baseline_calculate_24"
+                />
 
+        </menu>
+    </item>
 </menu>
