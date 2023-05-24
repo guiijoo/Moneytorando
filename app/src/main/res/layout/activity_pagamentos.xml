@@ -14,7 +14,7 @@
     <ImageView
         android:id="@+id/fundo_moneytorando_pagamento"
         android:layout_width="0dp"
-        android:layout_height="227dp"
+        android:layout_height="170dp"
         android:layout_marginBottom="360dp"
         android:background="#FF0000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -254,19 +254,5 @@
         app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/foto_perfil" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@android:style/TextAppearance.Widget.PopupMenu.Large"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/menu_incial"
-        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

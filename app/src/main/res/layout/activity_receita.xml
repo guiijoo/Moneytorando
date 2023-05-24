@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu_receita">
+    tools:context=".menu_receita"
+    tools:menu="@menu/menu_incial">
 
     <Button
         android:id="@+id/ajuda_receita_btn"
@@ -20,51 +21,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/entrar_login_btn"
         app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/fundo_moneytorando_login6"
-        android:layout_width="417dp"
-        android:layout_height="88dp"
-        android:layout_marginBottom="360dp"
-        android:background="#FF0000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/menu_atalho_receita"
-        android:layout_width="81dp"
-        android:layout_height="93dp"
-        android:textSize="24sp"
-        android:theme="@style/Theme.Teste"
-        app:icon="@drawable/barras_menu"
-        app:layout_anchor="@+id/fundo_moneytorando_principal"
-        app:layout_anchorGravity="start|top"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/menu_configurar_receita"
-        android:layout_width="77dp"
-        android:layout_height="93dp"
-        android:textSize="24sp"
-        android:theme="@style/Theme.Teste"
-        app:icon="@drawable/configurar_menu"
-        app:layout_anchor="@+id/fundo_moneytorando_principal"
-        app:layout_anchorGravity="end|top"
-        app:layout_constraintStart_toEndOf="@+id/retono_receita_menu_btn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/retono_receita_menu_btn"
-        android:layout_width="256dp"
-        android:layout_height="94dp"
-        android:text="Botao_Retorno_Menu"
-        app:icon="@drawable/retornar_icon"
-        app:layout_constraintStart_toEndOf="@+id/menu_atalho_receita"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
