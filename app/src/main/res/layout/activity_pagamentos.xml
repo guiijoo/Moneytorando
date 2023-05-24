@@ -14,7 +14,7 @@
     <ImageView
         android:id="@+id/fundo_moneytorando_pagamento"
         android:layout_width="0dp"
-        android:layout_height="227dp"
+        android:layout_height="170dp"
         android:layout_marginBottom="360dp"
         android:background="#FF0000"
         app:layout_constraintBottom_toBottomOf="parent"
