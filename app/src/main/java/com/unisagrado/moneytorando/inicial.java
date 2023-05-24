@@ -50,8 +50,7 @@ public class inicial extends AppCompatActivity {
         */
         String nome_usuario = getIntent().getStringExtra("nome_usuario");
         nome_usuario_coletado = findViewById(R.id.nome_usuario_inicial_txt);
-        nome_usuario_coletado.setText("Seja bem-vindo, "+nome_usuario+"!");
-        nome_usuarioS = nome_usuario;
+        nome_usuario_coletado.setText("Seja bem-vindo, "+ nome_usuario +"!");
 
         /////////////////////
 
