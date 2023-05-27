@@ -14,7 +14,7 @@
     <ImageView
         android:id="@+id/fundo_moneytorando_pagamento"
         android:layout_width="0dp"
-        android:layout_height="227dp"
+        android:layout_height="200dp"
         android:layout_marginBottom="360dp"
         android:background="#FF0000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,8 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toEndOf="@+id/foto_perfil_pagamento"
-        app:layout_constraintTop_toTopOf="@+id/fundo_moneytorando_pagamento"
-        app:layout_constraintVertical_bias="0.628" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/agua_image"
@@ -247,12 +246,12 @@
         android:layout_width="88dp"
         android:layout_height="100dp"
         android:layout_marginStart="48dp"
-        android:layout_marginBottom="40dp"
         app:layout_anchorGravity="center"
         app:layout_constraintBottom_toBottomOf="@+id/fundo_moneytorando_pagamento"
         app:layout_constraintEnd_toEndOf="@+id/fundo_moneytorando_pagamento"
         app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/foto_perfil" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

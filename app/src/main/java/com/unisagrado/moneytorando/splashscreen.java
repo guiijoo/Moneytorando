@@ -20,6 +20,7 @@ public class splashscreen extends AppCompatActivity {
             Intent i = new Intent(splashscreen.this,login.class);
             startActivity(i);
             finish();
+            onDestroy();
             }
         },5000);
     }

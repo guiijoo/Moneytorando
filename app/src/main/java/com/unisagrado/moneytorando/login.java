@@ -3,7 +3,9 @@ package com.unisagrado.moneytorando;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,11 +31,12 @@ public class login extends AppCompatActivity {
         buttonAvancar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String usuario = editTextUsuario.getText().toString();
-                String senha = editTextSenha.getText().toString();
+                SharedPreferences prefs = getSharedPreferences("preferencias", Context.MODE_PRIVATE);
+                SharedPreferences.Editor ed = prefs.edit();
+                ed.putString("usuario", editTextUsuario.getText().toString());
+                ed.putString("salario", editTextSenha.getText().toString());
+                ed.apply();
                 Intent intent = new Intent(login.this, inicial.class);
-                intent.putExtra("nome_usuario", usuario);
-                intent.putExtra("senha", senha);
                 startActivity(intent);
             }
         });
@@ -43,7 +46,7 @@ public class login extends AppCompatActivity {
     public void BotaoAjuda_login(View view){
         AlertDialog.Builder explicar = new AlertDialog.Builder(login.this);
         explicar.setTitle("Explicação !");
-        explicar.setMessage("Aqui será feito seu login do usuario, coloquei sua senha e nome de usuario para conseguir acessar sua conta, qualquer duvida entre em contato com os desenvolvedores para saber melhor as funções...para sair clique fora desse bloco!");
+        explicar.setMessage("Aqui será feito seu login do usuario, coloque seu salário e nome de usuario para conseguir acessar sua conta, qualquer duvida entre em contato com os desenvolvedores para saber melhor as funções...para sair clique fora desse bloco!");
         explicar.create().show();
     }
 }

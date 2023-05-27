@@ -7,13 +7,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
 
 public class creditos extends AppCompatActivity {
+
+    private Button btReturnCred;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creditos);
+
+        btReturnCred = findViewById(R.id.btRetornarCred);
+
+        btReturnCred.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 
     @Override

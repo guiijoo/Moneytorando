@@ -126,7 +126,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nome_colaboradores_01" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btRetornarCred"
         android:layout_width="58dp"
         android:layout_height="53dp"
         android:layout_marginEnd="10dp"
@@ -160,7 +160,7 @@
         android:fontFamily="sans-serif-smallcaps"
         android:text="Desenvolvedores:"
         android:textColor="#FFFFFF"
-        android:textSize="48dp"
+        android:textSize="30dp"
         android:textStyle="bold"
         android:typeface="sans"
         app:layout_constraintEnd_toEndOf="parent"
@@ -172,12 +172,12 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:background="#FD0000"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Docentes:"
         android:textColor="#FFFFFF"
-        android:textSize="48dp"
+        android:textSize="30dp"
         android:textStyle="bold"
         android:typeface="sans"
         app:layout_constraintEnd_toEndOf="parent"
