@@ -4,6 +4,8 @@ import static java.sql.Types.NULL;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -19,7 +21,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.Currency;
+import java.util.List;
 import java.util.Locale;
 
 public class inicial extends AppCompatActivity {
@@ -30,16 +34,19 @@ public class inicial extends AppCompatActivity {
     private String nome_usuarioS;
     private Button button;
 
+    String teste = "teste";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicial);
 
+
             SharedPreferences prefs = getSharedPreferences("preferencias", Context.MODE_PRIVATE);
             String nome_usuario = prefs.getString("usuario", "usuario" );
 
             nome_usuario_coletado = findViewById(R.id.nome_usuario_inicial_txt);
-            nome_usuario_coletado.setText("Seja bem-vindo, " + nome_usuario + "!");
+            nome_usuario_coletado.setText("Seja bem-vindo(a), " + nome_usuario + "!");
 
 
         /////////////////////
@@ -55,6 +62,14 @@ public class inicial extends AppCompatActivity {
         String valorFormatado = format.format(dinheiro_atualF);
         dinheiro_usuario.setText(valorFormatado);
         //////////////////////
+
+        //Historico de Transações:
+
+        RecyclerView recyclerView = findViewById(R.id.cashHistory);
+        List<item> items = new ArrayList<item>();
+
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerView.setAdapter(new MyAdapter(getApplicationContext(), items));
 
 
     }
@@ -100,6 +115,15 @@ public class inicial extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void additem(String resultado)
+    {
+        Bundle extra = getIntent().getExtras();
+
+        RecyclerView recyclerView = findViewById(R.id.cashHistory);
+        List<item> items = new ArrayList<item>();
+
+//        items.add(new item());
+    }
 
 }
 

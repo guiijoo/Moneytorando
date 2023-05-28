@@ -89,9 +89,14 @@
                 android:id="@+id/dados_historico_inicial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="item_dados_historico"
+                android:text="Histórico Financeiro"
                 android:textAlignment="center"
                 android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cashHistory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
 

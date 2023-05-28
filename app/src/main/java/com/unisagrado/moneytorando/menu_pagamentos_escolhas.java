@@ -4,16 +4,23 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.text.NumberFormat;
+import java.util.Currency;
+import java.util.Locale;
 
 public class menu_pagamentos_escolhas extends AppCompatActivity {
     private ImageView agua_image;
@@ -25,8 +32,7 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
     private ImageView seguranca_image;
     private ImageView moradia_image;
     private ImageView outros_image;
-    private Button bt_menu_atalho_pagamento;
-    private Menu menu_inicial;
+    private TextView dinheiroAtual;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +47,19 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
         seguranca_image = findViewById(R.id.seguranca_image);
         moradia_image = findViewById(R.id.moradia_image);
         outros_image = findViewById(R.id.outros_image);
+        dinheiroAtual = findViewById(R.id.dinheiro_usuario_txt);
+
+        SharedPreferences prefs = getSharedPreferences("preferencias", Context.MODE_PRIVATE);
+
+        double dinheiro_atualF = Double.parseDouble(prefs.getString("salario", "salario"));
+
+        Locale ptBr = new Locale("pt", "BR");
+        Currency brlCurrency = Currency.getInstance("BRL");
+        NumberFormat format = NumberFormat.getCurrencyInstance(ptBr);
+        format.setCurrency(brlCurrency);
+
+        String valorFormatado = format.format(dinheiro_atualF);
+        dinheiroAtual.setText(valorFormatado);
 
     }
 
