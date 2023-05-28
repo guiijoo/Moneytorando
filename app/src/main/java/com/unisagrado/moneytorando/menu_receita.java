@@ -3,20 +3,58 @@ package com.unisagrado.moneytorando;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class menu_receita extends AppCompatActivity {
+
+    private EditText valorConta_receita;
+    private Button btPagar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receita);
+
+
+        valorConta_receita = findViewById(R.id.valorConta_receita);
+
+
+
+
+
+
+
+
+
     }
+
+    public void Pagar(View view) {
+        Bundle index = getIntent().getExtras();
+
+        int imagem = index.getInt("agua");
+        String valorConta = valorConta_receita.toString();
+
+        Intent intent2 = new Intent(menu_receita.this, inicial.class);
+
+        RecyclerView recyclerView = findViewById(R.id.cashHistory);
+        List<item> items = new ArrayList<item>();
+        items.add(new item("conta de água", valorConta, imagem));
+
+        startActivity(intent2);
+
+    }
+
     public void BotaoAjuda_receita(View view){
         AlertDialog.Builder explicar = new AlertDialog.Builder(menu_receita.this);
         explicar.setTitle("Explicação !");

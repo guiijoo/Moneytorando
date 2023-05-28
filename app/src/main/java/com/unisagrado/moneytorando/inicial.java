@@ -1,6 +1,5 @@
 package com.unisagrado.moneytorando;
 
-import static java.sql.Types.NULL;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,7 +33,6 @@ public class inicial extends AppCompatActivity {
     private String nome_usuarioS;
     private Button button;
 
-    String teste = "teste";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +47,10 @@ public class inicial extends AppCompatActivity {
             nome_usuario_coletado.setText("Seja bem-vindo(a), " + nome_usuario + "!");
 
 
+
         /////////////////////
+
+
 
         TextView dinheiro_usuario = findViewById(R.id.dinheiro_usuario_inicial);
         double dinheiro_atualF = Double.parseDouble(prefs.getString("salario", "salario"));
@@ -115,15 +116,13 @@ public class inicial extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void additem(String resultado)
-    {
-        Bundle extra = getIntent().getExtras();
 
-        RecyclerView recyclerView = findViewById(R.id.cashHistory);
-        List<item> items = new ArrayList<item>();
 
-//        items.add(new item());
-    }
+//        RecyclerView recyclerView = findViewById(R.id.cashHistory);
+//        List<item> items = new ArrayList<item>();
+//        items.add(new item(nome, valor, id));
+////        items.add(new item());
+//    }
 
 }
 

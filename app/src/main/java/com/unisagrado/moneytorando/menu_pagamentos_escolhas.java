@@ -97,10 +97,15 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
     public void processarImagemViewClicada(int id_escolha){
         switch(id_escolha){
             case R.id.agua_image:
-                AlertDialog.Builder explicar_agua = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
-                explicar_agua.setTitle("Escolheu agua !");
-                explicar_agua.setMessage("teste agua ");
-                explicar_agua.create().show();
+                int id = R.drawable.agua_botao;
+                Intent intentAgua = new Intent(this, menu_receita.class);
+//                intentAgua.putExtra("agua", id);
+                startActivity(intentAgua);
+
+//                AlertDialog.Builder explicar_agua = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
+//                explicar_agua.setTitle("Escolheu agua !");
+//                explicar_agua.setMessage("teste agua ");
+//                explicar_agua.create().show();
                 break;
             case R.id.gas_image:
                 AlertDialog.Builder explicar_gas = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
