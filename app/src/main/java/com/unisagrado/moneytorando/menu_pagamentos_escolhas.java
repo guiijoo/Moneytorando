@@ -71,25 +71,29 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if(id == R.id.goReceita)
-        {
-            Intent intent = new Intent(this, menu_receita.class);
-            startActivity(intent);
-            return true;
-        }else if(id == R.id.goCreditos)
-        {
-            Intent intent = new Intent(this, creditos.class);
-            startActivity(intent);
-            return true;
-        }else if(id == R.id.goInicial)
-        {
-            Intent intent = new Intent(this, inicial.class);
-            startActivity(intent);
-            return true;
-        }else if(id == R.id.goPagamentos)
-        {
-            return true;
+        switch (item.getItemId()) {
+            case R.id.goCreditos:
+                Intent intent = new Intent(this, creditos.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.goPagamentos:
+                Intent intent1 = new Intent(this, menu_pagamentos_escolhas.class);
+                startActivity(intent1);
+                return true;
+
+            case R.id.goInicial:
+                Intent intent2 = new Intent(this, inicial.class);
+                startActivity(intent2);
+                return true;
+
+            case R.id.goReceita:
+                Intent intent3 = new Intent(this, menu_receita.class);
+                startActivity(intent3);
+                return true;
+            case R.id.goDocumentos:
+                Intent intent4 = new Intent(this,documentos.class);
+
         }
         return super.onOptionsItemSelected(item);
     }

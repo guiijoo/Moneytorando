@@ -90,6 +90,8 @@ public class menu_receita extends AppCompatActivity {
                 Intent intent3 = new Intent(this, menu_receita.class);
                 startActivity(intent3);
                 return true;
+            case R.id.goDocumentos:
+                Intent intent4 = new Intent(this,documentos.class);
 
         }
         return super.onOptionsItemSelected(item);

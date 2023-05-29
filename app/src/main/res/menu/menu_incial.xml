@@ -11,6 +11,11 @@
 
         <menu>
             <item
+                android:id="@+id/goDocumentos"
+                android:title="Menu de Documentos"
+                android:icon="@drawable/documentos_icon"
+                />
+            <item
                 android:id="@+id/goCreditos"
                 android:title="Creditos"
                 android:icon="@drawable/baseline_info_24"/>

@@ -7,33 +7,34 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Moneytorando"
-        android:label="@string/app_name"
         tools:targetApi="31">
         <activity
-            android:name=".creditos"
+            android:name=".documentos"
             android:exported="false"
             android:label="Tela de Créditos"/>
         <activity
+            android:name=".creditos"
+            android:exported="false"
+            android:label="Tela de Créditos" />
+        <activity
             android:name=".inicial"
             android:exported="false"
-            android:label="Tela inicial"
-            />
+            android:label="Tela inicial" />
         <activity
             android:name=".menu_pagamentos_escolhas"
             android:exported="false"
-            android:label="Tela de Pagamentos"
-            />
+            android:label="Tela de Pagamentos" />
         <activity
             android:name=".login"
-            android:theme="@style/Theme.Testing"
             android:exported="false"
-            />
+            android:theme="@style/Theme.Testing" />
         <activity
             android:name=".menu_receita"
             android:exported="false"
-            android:label="Tela de Receitas"/>
+            android:label="Tela de Receitas" />
         <activity
             android:name=".splashscreen"
             android:exported="true"
