@@ -27,26 +27,30 @@ public class login extends AppCompatActivity {
         editTextSenha = findViewById(R.id.usuario_senha_txt);
         buttonAvancar = findViewById(R.id.entrar_login_btn);
 
+        buttonAjuda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder explicar = new AlertDialog.Builder(login.this);
+                explicar.setTitle("Explicação !");
+                explicar.setMessage("Aqui será feito seu login do usuario, coloque seu salário e nome de usuario para conseguir acessar sua conta, qualquer duvida entre em contato com os desenvolvedores para saber melhor as funções...para sair clique fora desse bloco!");
+                explicar.create().show();
+            }
+        });
 
         buttonAvancar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences prefs = getSharedPreferences("preferencias", Context.MODE_PRIVATE);
-                SharedPreferences.Editor ed = prefs.edit();
-                ed.putString("usuario", editTextUsuario.getText().toString());
-                ed.putString("salario", editTextSenha.getText().toString());
-                ed.apply();
+                String nome = editTextUsuario.getText().toString();
+                Double salario = Double.parseDouble(editTextSenha.getText().toString());
                 Intent intent = new Intent(login.this, inicial.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("nome", nome);
+                bundle.putDouble("salario", salario);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
 
     }
 
-    public void BotaoAjuda_login(View view){
-        AlertDialog.Builder explicar = new AlertDialog.Builder(login.this);
-        explicar.setTitle("Explicação !");
-        explicar.setMessage("Aqui será feito seu login do usuario, coloque seu salário e nome de usuario para conseguir acessar sua conta, qualquer duvida entre em contato com os desenvolvedores para saber melhor as funções...para sair clique fora desse bloco!");
-        explicar.create().show();
-    }
 }

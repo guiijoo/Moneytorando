@@ -8,129 +8,62 @@
     tools:menu="@menu/menu_incial">
 
     <Button
-        android:id="@+id/ajuda_receita_btn"
+        android:id="@+id/btAjudaReceita"
         android:layout_width="77dp"
         android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:onClick="BotaoAjuda_receita"
         android:textAlignment="center"
         app:icon="@drawable/baseline_question_mark_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintHorizontal_bias="0.952"
 
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btPagarReceita" />
 
     <EditText
-        android:id="@+id/taxa_receita_txt"
+        android:id="@+id/etValorReceita"
         android:layout_width="232dp"
         android:layout_height="36dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="152dp"
         android:background="@drawable/bordas_editadas"
         android:ems="10"
         android:fontFamily="sans-serif-smallcaps"
-        android:hint="Taxa"
-        android:inputType="textPersonName"
+        android:hint="Valor da conta"
+        android:inputType="number|numberDecimal"
         android:textAlignment="center"
         android:textColor="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/valorConta_receita" />
-
-    <EditText
-        android:id="@+id/valorConta_receita"
-        android:layout_width="232dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="48dp"
-        android:background="@drawable/bordas_editadas"
-        android:ems="10"
-        android:fontFamily="sans-serif-smallcaps"
-        android:hint="Valor"
-        android:inputType="numberDecimal"
-        android:textAlignment="center"
-        android:textColor="#FF0000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/total_pagar" />
-
-    <EditText
-        android:id="@+id/investimento_receita_txt"
-        android:layout_width="232dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/bordas_editadas"
-        android:ems="10"
-        android:fontFamily="sans-serif-smallcaps"
-        android:hint="Investimento"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        android:textColor="#FF0000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/taxa_receita_txt" />
-
-    <EditText
-        android:id="@+id/juros_receita_txt"
-        android:layout_width="232dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/bordas_editadas"
-        android:ems="10"
-        android:fontFamily="sans-serif-smallcaps"
-        android:hint="Juros"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/investimento_receita_txt" />
-
-    <EditText
-        android:id="@+id/parcerias_receita_txt"
-        android:layout_width="232dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/bordas_editadas"
-        android:ems="10"
-        android:fontFamily="sans-serif-smallcaps"
-        android:hint="Parcerias"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        android:textColor="#FF0000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/juros_receita_txt" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btPagar"
+        android:id="@+id/btPagarReceita"
         android:layout_width="164dp"
         android:layout_height="58dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:onClick="Pagar"
         android:text="pagar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parcerias_receita_txt"
-        app:layout_constraintVertical_bias="0.493" />
+        app:layout_constraintTop_toBottomOf="@+id/etValorReceita" />
 
     <TextView
         android:id="@+id/total_pagar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Total Pagar Conta"
         android:textAlignment="center"
         android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/etValorReceita"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.416" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

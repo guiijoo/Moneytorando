@@ -1,10 +1,9 @@
 package com.unisagrado.moneytorando;
 
+import static java.sql.Types.NULL;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -20,9 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.NumberFormat;
-import java.util.ArrayList;
 import java.util.Currency;
-import java.util.List;
 import java.util.Locale;
 
 public class inicial extends AppCompatActivity {
@@ -33,44 +30,35 @@ public class inicial extends AppCompatActivity {
     private String nome_usuarioS;
     private Button button;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicial);
 
-
-            SharedPreferences prefs = getSharedPreferences("preferencias", Context.MODE_PRIVATE);
-            String nome_usuario = prefs.getString("usuario", "usuario" );
-
             nome_usuario_coletado = findViewById(R.id.nome_usuario_inicial_txt);
-            nome_usuario_coletado.setText("Seja bem-vindo(a), " + nome_usuario + "!");
+            dinheiro_usuario = findViewById(R.id.dinheiro_usuario_inicial);
+        String usuario;
+        double salario;
+
+            Bundle index = getIntent().getExtras();
+
+//            if(index != null)
+//            {
+                usuario = index.getString("nome");
+                salario = index.getDouble("salario");
+                nome_usuario_coletado.setText("Seja bem-vindo," + usuario + "!");
 
 
 
-        /////////////////////
-
-
-
-        TextView dinheiro_usuario = findViewById(R.id.dinheiro_usuario_inicial);
-        double dinheiro_atualF = Double.parseDouble(prefs.getString("salario", "salario"));
 
         Locale ptBr = new Locale("pt", "BR");
         Currency brlCurrency = Currency.getInstance("BRL");
         NumberFormat format = NumberFormat.getCurrencyInstance(ptBr);
         format.setCurrency(brlCurrency);
 
-        String valorFormatado = format.format(dinheiro_atualF);
+        String valorFormatado = format.format(salario);
         dinheiro_usuario.setText(valorFormatado);
         //////////////////////
-
-        //Historico de Transações:
-
-        RecyclerView recyclerView = findViewById(R.id.cashHistory);
-        List<item> items = new ArrayList<item>();
-
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        recyclerView.setAdapter(new MyAdapter(getApplicationContext(), items));
 
 
     }
@@ -90,7 +78,8 @@ public class inicial extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
+        switch (item.getItemId())
+        {
             case R.id.goCreditos:
                 Intent intent = new Intent(this, creditos.class);
                 startActivity(intent);
@@ -102,27 +91,19 @@ public class inicial extends AppCompatActivity {
                 return true;
 
             case R.id.goInicial:
-                Intent intent2 = new Intent(this, inicial.class);
-                startActivity(intent2);
+//                Intent intent2 = new Intent(this, inicial.class);
+//                startActivity(intent2);
                 return true;
 
             case R.id.goReceita:
                 Intent intent3 = new Intent(this, menu_receita.class);
                 startActivity(intent3);
                 return true;
-            case R.id.goDocumentos:
-                Intent intent4 = new Intent(this,documentos.class);
 
         }
         return super.onOptionsItemSelected(item);
     }
 
-
-//        RecyclerView recyclerView = findViewById(R.id.cashHistory);
-//        List<item> items = new ArrayList<item>();
-//        items.add(new item(nome, valor, id));
-////        items.add(new item());
-//    }
 
 }
 

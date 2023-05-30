@@ -105,7 +105,6 @@
         android:layout_height="57dp"
         android:layout_marginBottom="28dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:onClick="BotaoAjuda_login"
         android:textAlignment="center"
         app:icon="@drawable/baseline_question_mark_24"
         app:layout_constraintBottom_toBottomOf="parent"

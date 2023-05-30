@@ -3,7 +3,6 @@ package com.unisagrado.moneytorando;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,53 +12,32 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class menu_receita extends AppCompatActivity {
 
-    private EditText valorConta_receita;
-    private Button btPagar;
+    private Button btAjudaReceita = findViewById(R.id.btAjudaReceita);
+    private Button btPagarReceita = findViewById(R.id.btPagarReceita);
+    private EditText etValorReceita = findViewById(R.id.etValorReceita);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receita);
 
-
-        valorConta_receita = findViewById(R.id.valorConta_receita);
-
-
-
-
-
-
-
-
-
-    }
-
-    public void Pagar(View view) {
-        Bundle index = getIntent().getExtras();
-
-        int imagem = index.getInt("agua");
-        String valorConta = valorConta_receita.toString();
-
-        Intent intent2 = new Intent(menu_receita.this, inicial.class);
-
-        RecyclerView recyclerView = findViewById(R.id.cashHistory);
-        List<item> items = new ArrayList<item>();
-        items.add(new item("conta de água", valorConta, imagem));
-
-        startActivity(intent2);
-
-    }
-
-    public void BotaoAjuda_receita(View view){
-        AlertDialog.Builder explicar = new AlertDialog.Builder(menu_receita.this);
-        explicar.setTitle("Explicação !");
-        explicar.setMessage("Aqui você ira colocar os valores de :taxas,investimentos,juros,parcerias. Agora coloque os valores de acordo com os dados da sua cidade...para sair clique fora desse bloco!");
-        explicar.create().show();
+        btPagarReceita.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
+        btAjudaReceita.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder explicar = new AlertDialog.Builder(menu_receita.this);
+                explicar.setTitle("Explicação !");
+                explicar.setMessage("Aqui você ira colocar os valores de :taxas,investimentos,juros,parcerias. Agora coloque os valores de acordo com os dados da sua cidade...para sair clique fora desse bloco!");
+                explicar.create().show();
+            }
+        });
     }
 
     @Override
@@ -90,8 +68,6 @@ public class menu_receita extends AppCompatActivity {
                 Intent intent3 = new Intent(this, menu_receita.class);
                 startActivity(intent3);
                 return true;
-            case R.id.goDocumentos:
-                Intent intent4 = new Intent(this,documentos.class);
 
         }
         return super.onOptionsItemSelected(item);
