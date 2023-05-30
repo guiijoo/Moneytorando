@@ -37,8 +37,8 @@ public class creditos extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
+    public boolean onOptionsItemSelected(@NonNull MenuItem escolha) {
+        switch (escolha.getItemId()) {
             case R.id.goCreditos:
                 Intent intent = new Intent(this, creditos.class);
                 startActivity(intent);
@@ -60,8 +60,10 @@ public class creditos extends AppCompatActivity {
                 return true;
             case R.id.goDocumentos:
                 Intent intent4 = new Intent(this,documentos.class);
+                startActivity(intent4);
+                return true;
 
         }
-        return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(escolha);
     }
 }

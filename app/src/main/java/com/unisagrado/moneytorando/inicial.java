@@ -1,9 +1,9 @@
 package com.unisagrado.moneytorando;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -19,9 +19,7 @@ import java.util.Locale;
 public class inicial extends AppCompatActivity {
 
     private TextView nome_usuario_coletado;
-    private TextView dados_historico_inicial_TextView;
     private TextView dinheiro_usuario;
-    private String nome_usuarioS;
     private Button btAjudaInicial;
 
     @Override
@@ -72,8 +70,8 @@ public class inicial extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId())
+    public boolean onOptionsItemSelected(@NonNull MenuItem escolha) {
+        switch (escolha.getItemId())
         {
             case R.id.goCreditos:
                 Intent intent = new Intent(this, creditos.class);
@@ -96,9 +94,10 @@ public class inicial extends AppCompatActivity {
                 return true;
             case R.id.goDocumentos:
                 Intent intent4 = new Intent(this,documentos.class);
+                return true;
 
         }
-        return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(escolha);
     }
 
 

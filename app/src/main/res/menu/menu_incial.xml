@@ -10,11 +10,7 @@
         app:showAsAction="always">
 
         <menu>
-            <item
-                android:id="@+id/goDocumentos"
-                android:title="Menu de Documentos"
-                android:icon="@drawable/documentos_icon"
-                />
+
             <item
                 android:id="@+id/goCreditos"
                 android:title="Creditos"
@@ -36,6 +32,11 @@
                 android:id="@+id/goReceita"
                 android:title="Menu de Receitas"
                 android:icon="@drawable/baseline_calculate_24"
+                />
+            <item
+                android:id="@+id/goDocumentos"
+                android:title="Menu de Documentos"
+                android:icon="@drawable/documentos_icon"
                 />
 
         </menu>

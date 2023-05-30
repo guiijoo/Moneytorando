@@ -4,10 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbarThumbHorizontal="@drawable/barras_menu"
-    android:scrollbarThumbVertical="@drawable/barras_menu"
-    android:scrollbarTrackHorizontal="@drawable/barras_menu"
-    android:scrollbarTrackVertical="@drawable/barras_menu"
     tools:context=".menu_pagamentos_escolhas"
     tools:menu="@menu/menu_incial">
 
