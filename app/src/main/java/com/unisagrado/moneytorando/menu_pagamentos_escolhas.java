@@ -49,7 +49,7 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
         ajudaPagamentos = findViewById(R.id.ajuda_pagamento_btn);
         salarioAtual = findViewById(R.id.dinheiro_usuario_txt);
 
-        double salario = Double.parseDouble(salarioAtual.toString());
+        float salario = Float.parseFloat(salarioAtual.toString());
 
 
 
@@ -71,9 +71,9 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
 
 
                 ///////////////////////////////////////////////////////////////////////
-                Double salario = Double.parseDouble(salarioAtual.getText().toString());
+                float salario = Float.parseFloat(salarioAtual.getText().toString());
                 Bundle pagamentos = new Bundle();
-                pagamentos.putDouble("salarioReceita",salario);
+                pagamentos.putFloat("salarioReceita",salario);
                 ///////////////////////////////////////////////////////////////////////
 
             }

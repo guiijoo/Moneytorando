@@ -42,7 +42,7 @@
         app:srcCompat="@drawable/foto_perfil" />
 
     <TextView
-        android:id="@+id/nome_usuario_inicial_txt"
+        android:id="@+id/nomeUsuarioInicial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-smallcaps"
@@ -69,7 +69,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/dinheiro_usuario_inicial"
+        android:id="@+id/dinheiroUsuarioAtual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-smallcaps"

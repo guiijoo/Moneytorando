@@ -41,11 +41,11 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String nome = editTextUsuario.getText().toString();
-                Double salario = Double.parseDouble(editTextSenha.getText().toString());
+                String salario = editTextSenha.getText().toString();
                 Intent intent = new Intent(login.this, inicial.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("nome", nome);
-                bundle.putDouble("salario", salario);
+                bundle.putString("salario", salario);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
@@ -53,4 +53,9 @@ public class login extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+    }
 }

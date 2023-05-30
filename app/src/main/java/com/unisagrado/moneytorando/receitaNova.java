@@ -28,12 +28,12 @@ public class receitaNova extends AppCompatActivity {
         valorDescontar = findViewById(R.id.edValor);
         botaoReceitaNova = findViewById(R.id.btPagarRec);
 
-        double valorDescontarD = Double.parseDouble(valorDescontar.toString());
+        float valorDescontarF = Float.parseFloat(valorDescontar.toString());
 
         salarioReceitaAtual = findViewById(R.id.salarioAtualReceitaNova);
-        double salario = Double.parseDouble(salarioReceitaAtual.toString());
+        float salario = Float.parseFloat(salarioReceitaAtual.toString());
         Bundle receita = getIntent().getExtras();
-        salario = receita.getDouble("salarioReceita");
+        salario = receita.getFloat("salarioReceita");
 
         Locale ptBr = new Locale("pt", "BR");
         Currency brlCurrency = Currency.getInstance("BRL");
@@ -43,15 +43,15 @@ public class receitaNova extends AppCompatActivity {
         String valorFormatado = format.format(salario);
         salarioReceitaAtual.setText(valorFormatado);
 
-        double finalSalario = salario;
+        float finalSalario = salario;
         botaoReceitaNova.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent voltarInicial = new Intent(receitaNova.this,inicial.class);
-                double subtracaoSalario = valorDescontarD - finalSalario;
+                float subtracaoSalario = valorDescontarF - finalSalario;
                 //Double salario = Double.parseDouble(salarioReceitaAtual.getText().toString());
                 Bundle receitaNova = new Bundle();
-                receitaNova.putDouble("salario",subtracaoSalario);
+                receitaNova.putFloat("salario",subtracaoSalario);
             }
         });
         ///////////////////////////////////////////////////////////////

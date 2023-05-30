@@ -18,26 +18,26 @@ import java.util.Locale;
 
 public class inicial extends AppCompatActivity {
 
-    private TextView nome_usuario_coletado;
-    private TextView dinheiro_usuario;
+
     private Button btAjudaInicial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicial);
+        TextView dinheiro_usuario = findViewById(R.id.dinheiroUsuarioAtual);
 
-            nome_usuario_coletado = findViewById(R.id.nome_usuario_inicial_txt);
-            dinheiro_usuario = findViewById(R.id.dinheiro_usuario_inicial);
+        TextView nomeUsuarioColetado = findViewById(R.id.nomeUsuarioInicial);
         String usuario;
-        double salario = Double.parseDouble(dinheiro_usuario.toString());
+        float salario;
 
         Bundle index = getIntent().getExtras();
-        if(index != null) {
+
             usuario = index.getString("nome");
-            salario = index.getDouble("salario");
-            nome_usuario_coletado.setText("Seja bem-vindo(a)," + usuario + "!");
-        }
+            salario = index.getFloat("salario");
+            nomeUsuarioColetado.setText("Seja bem-vindo(a)," + usuario + "!");
+            dinheiro_usuario.setText(String.valueOf(salario));
+
 
 
         Locale ptBr = new Locale("pt", "BR");
@@ -47,6 +47,7 @@ public class inicial extends AppCompatActivity {
 
         String valorFormatado = format.format(salario);
         dinheiro_usuario.setText(valorFormatado);
+
         //////////////////////
         btAjudaInicial= findViewById(R.id.btAjudaInicial);
         btAjudaInicial.setOnClickListener(new View.OnClickListener() {
