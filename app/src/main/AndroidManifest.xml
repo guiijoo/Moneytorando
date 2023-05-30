@@ -12,9 +12,12 @@
         android:theme="@style/Theme.Moneytorando"
         tools:targetApi="31">
         <activity
+            android:name=".receitaNova"
+            android:exported="false" />
+        <activity
             android:name=".documentos"
             android:exported="false"
-            android:label="Tela de Créditos"/>
+            android:label="Documentos" />
         <activity
             android:name=".creditos"
             android:exported="false"

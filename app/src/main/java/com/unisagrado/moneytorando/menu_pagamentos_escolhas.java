@@ -25,8 +25,7 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
     private ImageView seguranca_image;
     private ImageView moradia_image;
     private ImageView outros_image;
-    private Button bt_menu_atalho_pagamento;
-    private Menu menu_inicial;
+    private Button ajudaPagamentos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +40,25 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
         seguranca_image = findViewById(R.id.seguranca_image);
         moradia_image = findViewById(R.id.moradia_image);
         outros_image = findViewById(R.id.outros_image);
+        ajudaPagamentos = findViewById(R.id.ajuda_pagamento_btn);
+
+        agua_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentAgua = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
+                startActivity(intentAgua);
+
+            }
+        });
+        ajudaPagamentos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder explicar = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
+                explicar.setTitle("Explicação !");
+                explicar.setMessage("Aqui você vai escolher qual pagamento deverá quitar primeiro, cada simbolo representa taxas diferentes, escolha sabiamente qual começar!...para sair clique fora desse bloco! ");
+                explicar.create().show();
+            }
+        });
 
     }
 
@@ -51,8 +69,8 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
+    public boolean onOptionsItemSelected(@NonNull MenuItem escolha) {
+        switch (escolha.getItemId()) {
             case R.id.goCreditos:
                 Intent intent = new Intent(this, creditos.class);
                 startActivity(intent);
@@ -69,22 +87,20 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
                 return true;
 
             case R.id.goReceita:
-                Intent intent3 = new Intent(this, menu_receita.class);
+                Intent intent3 = new Intent(this, receitaNova.class);
                 startActivity(intent3);
                 return true;
             case R.id.goDocumentos:
                 Intent intent4 = new Intent(this,documentos.class);
+                startActivity(intent4);
+                return true;
 
         }
-        return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(escolha);
     }
 
     public void processarImagemViewClicada(int id_escolha){
         switch(id_escolha){
-            case R.id.agua_image:
-                Intent intentAgua = new Intent(menu_pagamentos_escolhas.this, menu_receita.class);
-                startActivity(intentAgua);
-                break;
             case R.id.gas_image:
                 AlertDialog.Builder explicar_gas = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
                 explicar_gas.setTitle("Escolheu gas !");
@@ -136,13 +152,6 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
         }
     }
 
-
-    void BotaoAjuda_pagamentos(View view){
-        AlertDialog.Builder explicar = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
-        explicar.setTitle("Explicação !");
-        explicar.setMessage("Aqui você vai escolher qual pagamento deverá quitar primeiro, cada simbolo representa taxas diferentes, escolha sabiamente qual começar!...para sair clique fora desse bloco! ");
-        explicar.create().show();
-    }
     public void escolha_pagamento(View view){
         int id_escolha = view.getId();
         processarImagemViewClicada(id_escolha);

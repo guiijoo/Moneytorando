@@ -30,17 +30,14 @@ public class inicial extends AppCompatActivity {
             nome_usuario_coletado = findViewById(R.id.nome_usuario_inicial_txt);
             dinheiro_usuario = findViewById(R.id.dinheiro_usuario_inicial);
         String usuario;
-        double salario;
+        double salario = Double.parseDouble(dinheiro_usuario.toString());
 
-            Bundle index = getIntent().getExtras();
-
-//            if(index != null)
-//            {
-                usuario = index.getString("nome");
-                salario = index.getDouble("salario");
-                nome_usuario_coletado.setText("Seja bem-vindo(a)," + usuario + "!");
-
-
+        Bundle index = getIntent().getExtras();
+        if(index != null) {
+            usuario = index.getString("nome");
+            salario = index.getDouble("salario");
+            nome_usuario_coletado.setText("Seja bem-vindo(a)," + usuario + "!");
+        }
 
 
         Locale ptBr = new Locale("pt", "BR");
@@ -89,11 +86,12 @@ public class inicial extends AppCompatActivity {
                 return true;
 
             case R.id.goReceita:
-                Intent intent3 = new Intent(this, menu_receita.class);
+                Intent intent3 = new Intent(this, receitaNova.class);
                 startActivity(intent3);
                 return true;
             case R.id.goDocumentos:
                 Intent intent4 = new Intent(this,documentos.class);
+                startActivity(intent4);
                 return true;
 
         }

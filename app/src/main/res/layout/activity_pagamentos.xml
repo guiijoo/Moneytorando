@@ -56,7 +56,6 @@
         android:layout_height="82dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="12dp"
-        android:onClick="escolha_pagamento"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fundo_moneytorando_pagamento"
         app:srcCompat="@drawable/agua_botao" />

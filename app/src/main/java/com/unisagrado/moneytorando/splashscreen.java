@@ -22,6 +22,6 @@ public class splashscreen extends AppCompatActivity {
             finish();
             onDestroy();
             }
-        },5000);
+        },2500);
     }
 }
