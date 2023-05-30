@@ -41,11 +41,11 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String nome = editTextUsuario.getText().toString();
-                String salario = editTextSenha.getText().toString();
+                float salario = Float.parseFloat(editTextSenha.getText().toString());
                 Intent intent = new Intent(login.this, inicial.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("nome", nome);
-                bundle.putString("salario", salario);
+                bundle.putFloat("salario", salario);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }

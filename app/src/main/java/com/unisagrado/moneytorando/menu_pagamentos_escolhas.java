@@ -49,7 +49,9 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
         ajudaPagamentos = findViewById(R.id.ajuda_pagamento_btn);
         salarioAtual = findViewById(R.id.dinheiro_usuario_txt);
 
-        float salario = Float.parseFloat(salarioAtual.toString());
+        float salario;
+        Bundle index = getIntent().getExtras();
+        salario = index.getFloat("salario");
 
 
 
@@ -62,22 +64,6 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
         salarioAtual.setText(valorFormatado);
         ///////////////////////////////////////////////////////////////
 
-        agua_image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentAgua = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
-                startActivity(intentAgua);
-
-
-
-                ///////////////////////////////////////////////////////////////////////
-                float salario = Float.parseFloat(salarioAtual.getText().toString());
-                Bundle pagamentos = new Bundle();
-                pagamentos.putFloat("salarioReceita",salario);
-                ///////////////////////////////////////////////////////////////////////
-
-            }
-        });
         ajudaPagamentos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -129,6 +115,18 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
 
     public void processarImagemViewClicada(int id_escolha){
         switch(id_escolha){
+            case R.id.agua_image:
+                Intent intentAgua = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
+                startActivity(intentAgua);
+
+
+                ///////////////////////////////////////////////////////////////////////
+                float salario = Float.parseFloat(salarioAtual.getText().toString());
+                Bundle pagamentos = new Bundle();
+                pagamentos.putFloat("salarioReceita",salario);
+                ///////////////////////////////////////////////////////////////////////
+                break;
+
             case R.id.gas_image:
                 AlertDialog.Builder explicar_gas = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
                 explicar_gas.setTitle("Escolheu gas !");

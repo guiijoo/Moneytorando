@@ -83,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nome_integrante_01" />
 
     <TextView
-        android:id="@+id/nome_integrante_05"
+        android:id="@+id/gabriel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
@@ -96,6 +96,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_integrante_04" />
+
+    <TextView
+        android:id="@+id/nome_integrante_"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Gabriel Martinez Machado"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gabriel" />
 
     <TextView
         android:id="@+id/nome_colaboradores_01"
@@ -183,6 +199,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nome_integrante_05" />
+        app:layout_constraintTop_toBottomOf="@+id/gabriel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

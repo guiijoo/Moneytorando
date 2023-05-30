@@ -32,6 +32,10 @@ public class inicial extends AppCompatActivity {
         float salario;
 
         Bundle index = getIntent().getExtras();
+//        if(index !=null)
+//        {
+//            if()
+//        }
 
             usuario = index.getString("nome");
             salario = index.getFloat("salario");
@@ -77,7 +81,12 @@ public class inicial extends AppCompatActivity {
                 return true;
 
             case R.id.goPagamentos:
+                Bundle index = getIntent().getExtras();
+                float salario = index.getFloat("salario");
                 Intent intent1 = new Intent(this, menu_pagamentos_escolhas.class);
+                Bundle bundle = new Bundle();
+                bundle.putFloat("salario", salario);
+                intent1.putExtras(bundle);
                 startActivity(intent1);
                 return true;
 
