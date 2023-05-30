@@ -14,6 +14,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.text.NumberFormat;
+import java.util.Currency;
+import java.util.Locale;
 
 public class menu_pagamentos_escolhas extends AppCompatActivity {
     private ImageView agua_image;
@@ -27,6 +32,7 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
     private ImageView outros_image;
     private Button ajudaPagamentos;
 
+    private TextView salarioAtual;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,12 +47,34 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
         moradia_image = findViewById(R.id.moradia_image);
         outros_image = findViewById(R.id.outros_image);
         ajudaPagamentos = findViewById(R.id.ajuda_pagamento_btn);
+        salarioAtual = findViewById(R.id.dinheiro_usuario_txt);
+
+        double salario = Double.parseDouble(salarioAtual.toString());
+
+
+
+        //////////////////////////////////////////////////////////////
+        Locale ptBr = new Locale("pt", "BR");
+        Currency brlCurrency = Currency.getInstance("BRL");
+        NumberFormat format = NumberFormat.getCurrencyInstance(ptBr);
+        format.setCurrency(brlCurrency);
+        String valorFormatado = format.format(salario);
+        salarioAtual.setText(valorFormatado);
+        ///////////////////////////////////////////////////////////////
 
         agua_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intentAgua = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
                 startActivity(intentAgua);
+
+
+
+                ///////////////////////////////////////////////////////////////////////
+                Double salario = Double.parseDouble(salarioAtual.getText().toString());
+                Bundle pagamentos = new Bundle();
+                pagamentos.putDouble("salarioReceita",salario);
+                ///////////////////////////////////////////////////////////////////////
 
             }
         });
