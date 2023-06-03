@@ -52,16 +52,12 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
         float salario;
         salario = getSharedPreferences("preferencias", MODE_PRIVATE).getFloat("salario", 000);
 
-
-
-        //////////////////////////////////////////////////////////////
         Locale ptBr = new Locale("pt", "BR");
         Currency brlCurrency = Currency.getInstance("BRL");
         NumberFormat format = NumberFormat.getCurrencyInstance(ptBr);
         format.setCurrency(brlCurrency);
         String valorFormatado = format.format(salario);
         salarioAtual.setText(valorFormatado);
-        ///////////////////////////////////////////////////////////////
 
         ajudaPagamentos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,59 +111,41 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
     public void processarImagemViewClicada(int id_escolha){
         switch(id_escolha){
             case R.id.agua_image:
-//                float salarioColetado = getIntent().getExtras().getFloat("salarioPassar");
                 Intent intentAgua = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
-//                intentAgua.putExtra("salarioReceita",salarioColetado);
                 startActivity(intentAgua);
                 break;
 
             case R.id.gas_image:
-                AlertDialog.Builder explicar_gas = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
-                explicar_gas.setTitle("Escolheu gas !");
-                explicar_gas.setMessage("teste gas ");
-                explicar_gas.create().show();
+                Intent intentGas = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
+                startActivity(intentGas);
                 break;
             case R.id.energia_image:
-                AlertDialog.Builder explicar_energia = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
-                explicar_energia.setTitle("Escolheu energia !");
-                explicar_energia.setMessage("teste energia ");
-                explicar_energia.create().show();
+                Intent intentEnergia = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
+                startActivity(intentEnergia);
                 break;
             case R.id.outros_image:
-                AlertDialog.Builder explicar_outros = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
-                explicar_outros.setTitle("Escolheu outros !");
-                explicar_outros.setMessage("teste outros ");
-                explicar_outros.create().show();
+                Intent intentOutros = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
+                startActivity(intentOutros);
                 break;
             case R.id.telefone_image:
-                AlertDialog.Builder explicar_telefone = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
-                explicar_telefone.setTitle("Escolheu telefone !");
-                explicar_telefone.setMessage("teste telefone ");
-                explicar_telefone.create().show();
+                Intent intentTelefone = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
+                startActivity(intentTelefone);
                 break;
             case R.id.seguranca_image:
-                AlertDialog.Builder explicar_seguranca = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
-                explicar_seguranca.setTitle("Escolheu segurança !");
-                explicar_seguranca.setMessage("teste segurança ");
-                explicar_seguranca.create().show();
+                Intent intentSeguranca = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
+                startActivity(intentSeguranca);
                 break;
             case R.id.cartao_image:
-                AlertDialog.Builder explicar_cartao = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
-                explicar_cartao.setTitle("Escolheu cartao !");
-                explicar_cartao.setMessage("teste cartao ");
-                explicar_cartao.create().show();
+                Intent intentCartao = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
+                startActivity(intentCartao);
                 break;
             case R.id.shopping_image:
-                AlertDialog.Builder explicar_shopping = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
-                explicar_shopping.setTitle("Escolheu shopping !");
-                explicar_shopping.setMessage("teste shopping ");
-                explicar_shopping.create().show();
+                Intent intentShopping = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
+                startActivity(intentShopping);
                 break;
             case R.id.moradia_image:
-                AlertDialog.Builder explicar_moradia = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
-                explicar_moradia.setTitle("Escolheu moradia !");
-                explicar_moradia.setMessage("teste moradia ");
-                explicar_moradia.create().show();
+                Intent intentMoradia = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
+                startActivity(intentMoradia);
                 break;
         }
     }

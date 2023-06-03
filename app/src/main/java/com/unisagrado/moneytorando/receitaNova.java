@@ -38,7 +38,6 @@ public class receitaNova extends AppCompatActivity {
                 SharedPreferences.Editor edt = getSharedPreferences("preferencias",MODE_PRIVATE).edit();
                 edt.putFloat("salario", subtracaoSalario);
                 edt.apply();
-//                voltarInicial.putExtra("salario",subtracaoSalario);
                 startActivity(voltarInicial);
             }
         });

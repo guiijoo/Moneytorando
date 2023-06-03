@@ -49,10 +49,7 @@ public class login extends AppCompatActivity {
                 SharedPreferences.Editor edt = sharedPreferences.edit();
                 edt.putString("nome", nome);
                 edt.putFloat("salario", salario);
-//                Bundle bundle = new Bundle();
-//                bundle.putFloat("salario", salario);
                 edt.apply();
-//                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
