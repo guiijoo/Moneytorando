@@ -50,8 +50,7 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
         salarioAtual = findViewById(R.id.dinheiro_usuario_txt);
 
         float salario;
-        Bundle index = getIntent().getExtras();
-        salario = index.getFloat("salario");
+        salario = getSharedPreferences("preferencias", MODE_PRIVATE).getFloat("salario", 000);
 
 
 
@@ -116,9 +115,9 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
     public void processarImagemViewClicada(int id_escolha){
         switch(id_escolha){
             case R.id.agua_image:
-                float salarioColetado = getIntent().getExtras().getFloat("salarioPassar");
+//                float salarioColetado = getIntent().getExtras().getFloat("salarioPassar");
                 Intent intentAgua = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
-                intentAgua.putExtra("salarioReceita",salarioColetado);
+//                intentAgua.putExtra("salarioReceita",salarioColetado);
                 startActivity(intentAgua);
                 break;
 

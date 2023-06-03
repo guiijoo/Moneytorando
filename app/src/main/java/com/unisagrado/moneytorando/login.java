@@ -40,13 +40,19 @@ public class login extends AppCompatActivity {
         buttonAvancar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SharedPreferences sharedPreferences = getSharedPreferences("preferencias", Context.MODE_PRIVATE);
+
                 String nome = editTextUsuario.getText().toString();
                 float salario = Float.parseFloat(editTextSenha.getText().toString());
+
                 Intent intent = new Intent(login.this, inicial.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("nome", nome);
-                bundle.putFloat("salario", salario);
-                intent.putExtras(bundle);
+                SharedPreferences.Editor edt = sharedPreferences.edit();
+                edt.putString("nome", nome);
+                edt.putFloat("salario", salario);
+//                Bundle bundle = new Bundle();
+//                bundle.putFloat("salario", salario);
+                edt.apply();
+//                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });

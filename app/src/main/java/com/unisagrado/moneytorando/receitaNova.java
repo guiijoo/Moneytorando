@@ -3,7 +3,9 @@ package com.unisagrado.moneytorando;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,7 +24,7 @@ public class receitaNova extends AppCompatActivity {
         valorDescontar = findViewById(R.id.edValor);
         botaoReceitaNova = findViewById(R.id.btPagarRec);
 
-        float salario = getIntent().getExtras().getFloat("salarioReceita");
+        float salario = getSharedPreferences("preferencias", MODE_PRIVATE).getFloat("salario", 000);
 
         botaoReceitaNova.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,7 +35,10 @@ public class receitaNova extends AppCompatActivity {
 
                 Intent voltarInicial = new Intent(receitaNova.this,inicial.class);
                 float subtracaoSalario = salario-valorDescontarF;
-                voltarInicial.putExtra("salario",subtracaoSalario);
+                SharedPreferences.Editor edt = getSharedPreferences("preferencias",MODE_PRIVATE).edit();
+                edt.putFloat("salario", subtracaoSalario);
+                edt.apply();
+//                voltarInicial.putExtra("salario",subtracaoSalario);
                 startActivity(voltarInicial);
             }
         });

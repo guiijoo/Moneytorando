@@ -5,6 +5,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -36,9 +37,9 @@ public class inicial extends AppCompatActivity {
 //        {
 //            if()
 //        }
-
-            usuario = index.getString("nome");
-            salario = index.getFloat("salario");
+//index.getString("nome");
+            usuario = getSharedPreferences("preferencias", MODE_PRIVATE).getString("nome", "nome inválido");
+            salario = getSharedPreferences("preferencias", MODE_PRIVATE).getFloat("salario", 000);
             nomeUsuarioColetado.setText("Seja bem-vindo(a)," + usuario + "!");
             dinheiro_usuario.setText(String.valueOf(salario));
 
@@ -81,12 +82,12 @@ public class inicial extends AppCompatActivity {
                 return true;
 
             case R.id.goPagamentos:
-                Bundle index = getIntent().getExtras();
-                float salarioPassar = index.getFloat("salario");
+//                Bundle index = getIntent().getExtras();
+//                float salarioPassar = getSharedPreferences("preferencias", MODE_PRIVATE).getFloat("salario", 000);
                 Intent intent1 = new Intent(this, menu_pagamentos_escolhas.class);
-//                Bundle bundle = new Bundle();
-                intent1.putExtra("salarioPassar", salarioPassar);
-//                intent1.putExtras(bundle);
+////                Bundle bundle = new Bundle();
+//                intent1.putExtra("salarioPassar", salarioPassar);
+////                intent1.putExtras(bundle);
                 startActivity(intent1);
                 return true;
 
