@@ -116,15 +116,10 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
     public void processarImagemViewClicada(int id_escolha){
         switch(id_escolha){
             case R.id.agua_image:
+                float salarioColetado = getIntent().getExtras().getFloat("salarioPassar");
                 Intent intentAgua = new Intent(menu_pagamentos_escolhas.this, receitaNova.class);
+                intentAgua.putExtra("salarioReceita",salarioColetado);
                 startActivity(intentAgua);
-
-
-                ///////////////////////////////////////////////////////////////////////
-                float salario = Float.parseFloat(salarioAtual.getText().toString());
-                Bundle pagamentos = new Bundle();
-                pagamentos.putFloat("salarioReceita",salario);
-                ///////////////////////////////////////////////////////////////////////
                 break;
 
             case R.id.gas_image:

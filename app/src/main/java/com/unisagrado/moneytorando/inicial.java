@@ -82,11 +82,11 @@ public class inicial extends AppCompatActivity {
 
             case R.id.goPagamentos:
                 Bundle index = getIntent().getExtras();
-                float salario = index.getFloat("salario");
+                float salarioPassar = index.getFloat("salario");
                 Intent intent1 = new Intent(this, menu_pagamentos_escolhas.class);
-                Bundle bundle = new Bundle();
-                bundle.putFloat("salario", salario);
-                intent1.putExtras(bundle);
+//                Bundle bundle = new Bundle();
+                intent1.putExtra("salarioPassar", salarioPassar);
+//                intent1.putExtras(bundle);
                 startActivity(intent1);
                 return true;
 
