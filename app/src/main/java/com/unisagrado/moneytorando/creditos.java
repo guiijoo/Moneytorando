@@ -13,23 +13,10 @@ import android.widget.Button;
 
 public class creditos extends AppCompatActivity {
 
-    private Button btReturnCred;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creditos);
-
-        btReturnCred = findViewById(R.id.btRetornarCred);
-
-        btReturnCred.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                onBackPressed();
-            }
-        });
     }
 
     @Override
@@ -56,11 +43,6 @@ public class creditos extends AppCompatActivity {
                 startActivity(intent2);
                 return true;
 
-            case R.id.goReceita:
-                Intent intent3 = new Intent(this, receitaNova.class);
-                startActivity(intent3);
-                return true;
-
             case R.id.goDocumentos:
                 Intent intent4 = new Intent(this,documentos.class);
                 startActivity(intent4);
@@ -68,5 +50,10 @@ public class creditos extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(escolha);
+    }
+
+    public void voltar(View view)
+    {
+        onBackPressed();
     }
 }

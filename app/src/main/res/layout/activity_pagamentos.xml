@@ -7,6 +7,20 @@
     tools:context=".menu_pagamentos_escolhas"
     tools:menu="@menu/menu_incial">
 
+    <Button
+        android:id="@+id/ajuda_pagamento_btn5"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="voltar"
+        android:textAlignment="center"
+        app:icon="@drawable/retornar_icon"
+        app:iconSize="38dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ajuda_pagamento_btn" />
+
     <ImageView
         android:id="@+id/fundo_moneytorando_pagamento"
         android:layout_width="0dp"
@@ -24,7 +38,7 @@
         android:id="@+id/ajuda_pagamento_btn"
         android:layout_width="73dp"
         android:layout_height="57dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="sans-serif-smallcaps"
         android:onClick="BotaoAjuda_pagamentos"
         android:textAlignment="center"
@@ -33,21 +47,6 @@
         app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pagamento_outros_txt" />
-
-    <Button
-        android:id="@+id/ajuda_pagamento_btn2"
-        android:layout_width="73dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:onClick="voltar"
-        android:textAlignment="center"
-        app:icon="@drawable/retornar_icon"
-        app:iconSize="38dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.976"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ajuda_pagamento_btn" />
 
     <TextView
         android:id="@+id/dinheiro_usuario_txt"

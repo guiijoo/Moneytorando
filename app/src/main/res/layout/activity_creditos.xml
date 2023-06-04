@@ -14,11 +14,10 @@
         android:id="@+id/imageView2"
         android:layout_width="0dp"
         android:layout_height="120dp"
-        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
         app:srcCompat="@drawable/logofacul2" />
 
     <TextView
@@ -26,30 +25,30 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Luís Guilherme Josepette Marchetto"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/nome_integrante_" />
 
     <TextView
         android:id="@+id/nome_integrante_04"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Eduardo Garcia Bonaci"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nome_integrante_03" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/nome_integrante_03"
@@ -63,7 +62,7 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_integrante_02" />
 
@@ -78,7 +77,7 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_integrante_01" />
 
@@ -94,6 +93,7 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_integrante_04" />
 
@@ -142,30 +142,27 @@
         app:layout_constraintTop_toBottomOf="@+id/nome_colaboradores_01" />
 
     <Button
-        android:id="@+id/btRetornarCred"
-        android:layout_width="58dp"
-        android:layout_height="53dp"
+        android:id="@+id/ajuda_pagamento_btn2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:text=" "
+        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="voltar"
         android:textAlignment="center"
         app:icon="@drawable/retornar_icon"
+        app:iconSize="38dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.91" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="0dp"
         android:layout_height="120dp"
-        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nome_colaboradores_02"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
         app:srcCompat="@drawable/logofacul1" />
 
     <TextView
@@ -188,7 +185,7 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:background="#FD0000"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Docentes:"
@@ -199,6 +196,56 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gabriel" />
+        app:layout_constraintTop_toBottomOf="@+id/nome_integrante_03" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#FD0000"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Docentes:"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome_colaboradores_02" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#FD0000"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Curso:"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome_colaboradores_02" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FD0000"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Apoio:"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

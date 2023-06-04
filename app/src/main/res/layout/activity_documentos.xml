@@ -8,15 +8,16 @@
     tools:menu="@menu/menu_incial">
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="68dp"
-        android:layout_height="66dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:id="@+id/ajuda_pagamento_btn4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:onClick="voltar"
+        android:textAlignment="center"
         app:icon="@drawable/retornar_icon"
-        app:iconGravity="textTop"
-        app:iconSize="32dp"
+        app:iconSize="38dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -32,6 +33,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FD0000"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Resumo Geral"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="36dp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Renda: É o dinheiro que entra na sua casa. Pode vir de fontes como salários, investimentos, aluguel, etc. Taxas: É o dinheiro que sai da sua casa. É tudo que você tem que gastar para manter seu estilo de vida. Despesas fixas: São despesas recorrentes mensais, como aluguel, água, luz, internet, etc. Despesas Variáveis: Despesas que mudam com base no uso, como lazer, alimentação fora de casa, compras, etc. Controle de Despesas: Monitore e registre o comportamento de todas as despesas para controlar melhor suas finanças e evitar gastos desnecessários. Orçamento doméstico: Um plano para receitas e despesas domésticas elaborado para equilibrar as contas e atingir metas financeiras de longo prazo. "
+                android:textAlignment="textStart"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -162,28 +185,6 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="O orçamento doméstico é um instrumento financeiro utilizado para controlar as receitas e despesas de uma família ou indivíduo no local onde vivem. É uma forma de planejamento financeiro que auxilia na definição de metas e prioridades para atingir objetivos de curto, médio e longo prazo. Um orçamento doméstico dá às pessoas uma ideia de suas despesas e receitas, quanto podem economizar e identifica áreas onde podem reduzir custos. Além disso, é uma forma de evitar dívidas desnecessárias e manter a saúde financeira, proporcionando mais equilíbrio e tranquilidade em sua vida. O controle do orçamento doméstico pode ser feito por meio de planilhas, aplicativos ou softwares especializados."
-                android:textAlignment="textStart"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FD0000"
-                android:fontFamily="sans-serif-smallcaps"
-                android:text="Resumo Geral"
-                android:textAlignment="textStart"
-                android:textColor="#FFFFFF"
-                android:textSize="36dp"
-                android:textStyle="bold"
-                android:typeface="normal" />
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="Renda: É o dinheiro que entra na sua casa. Pode vir de fontes como salários, investimentos, aluguel, etc. Taxas: É o dinheiro que sai da sua casa. É tudo que você tem que gastar para manter seu estilo de vida. Despesas fixas: São despesas recorrentes mensais, como aluguel, água, luz, internet, etc. Despesas Variáveis: Despesas que mudam com base no uso, como lazer, alimentação fora de casa, compras, etc. Controle de Despesas: Monitore e registre o comportamento de todas as despesas para controlar melhor suas finanças e evitar gastos desnecessários. Orçamento doméstico: Um plano para receitas e despesas domésticas elaborado para equilibrar as contas e atingir metas financeiras de longo prazo. "
                 android:textAlignment="textStart"
                 android:textSize="16sp" />
 

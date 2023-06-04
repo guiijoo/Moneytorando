@@ -14,29 +14,27 @@
             <item
                 android:id="@+id/goCreditos"
                 android:title="Creditos"
-                android:icon="@drawable/baseline_info_24"/>
+                android:icon="@drawable/baseline_info_24"
+                android:orderInCategory="500"/>
 
             <item
                 android:id="@+id/goInicial"
                 android:title="Inicial"
                 android:icon="@drawable/home_icon_black"
+                android:orderInCategory="100"
                 />
 
             <item
                 android:id="@+id/goPagamentos"
                 android:title="Menu de Pagamentos"
                 android:icon="@drawable/baseline_attach_money_24"
-                />
-
-            <item
-                android:id="@+id/goReceita"
-                android:title="Menu de Receitas"
-                android:icon="@drawable/baseline_calculate_24"
+                android:orderInCategory="200"
                 />
             <item
                 android:id="@+id/goDocumentos"
                 android:title="Menu de Documentos"
                 android:icon="@drawable/documentos_icon"
+                android:orderInCategory="400"
                 />
 
         </menu>

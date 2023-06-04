@@ -85,10 +85,6 @@ public class inicial extends AppCompatActivity {
                 startActivity(intent2);
                 return true;
 
-            case R.id.goReceita:
-                Intent intent3 = new Intent(this, receitaNova.class);
-                startActivity(intent3);
-                return true;
             case R.id.goDocumentos:
                 Intent intent4 = new Intent(this,documentos.class);
                 startActivity(intent4);
