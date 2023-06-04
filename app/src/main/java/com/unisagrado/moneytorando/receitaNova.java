@@ -1,5 +1,6 @@
 package com.unisagrado.moneytorando;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -35,11 +36,26 @@ public class receitaNova extends AppCompatActivity {
 
                 Intent voltarInicial = new Intent(receitaNova.this,inicial.class);
                 float subtracaoSalario = salario-valorDescontarF;
-                SharedPreferences.Editor edt = getSharedPreferences("preferencias",MODE_PRIVATE).edit();
-                edt.putFloat("salario", subtracaoSalario);
-                edt.apply();
-                startActivity(voltarInicial);
+
+                if(subtracaoSalario > 0) {
+                    SharedPreferences.Editor edt = getSharedPreferences("preferencias", MODE_PRIVATE).edit();
+                    edt.putFloat("salario", subtracaoSalario);
+                    edt.apply();
+                    startActivity(voltarInicial);
+                }else
+                {
+                    AlertDialog.Builder explicar = new AlertDialog.Builder(receitaNova.this);
+                    explicar.setTitle("ERRO!");
+                    explicar.setMessage("Dinheiro insuficiente!");
+                    explicar.create().show();
+                }
+
             }
         });
+    }
+
+    public void voltar(View view)
+    {
+        onBackPressed();
     }
 }

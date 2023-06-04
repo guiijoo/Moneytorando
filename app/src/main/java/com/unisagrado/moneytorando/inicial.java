@@ -98,6 +98,23 @@ public class inicial extends AppCompatActivity {
         return super.onOptionsItemSelected(escolha);
     }
 
+    public void IrPagamentos(View view)
+    {
+        Intent intent = new Intent(this, menu_pagamentos_escolhas.class);
+        startActivity(intent);
+    }
+
+    public void IrCreditos(View view)
+    {
+        Intent intent = new Intent(this, creditos.class);
+        startActivity(intent);
+    }
+
+    public void IrAnexos(View view)
+    {
+        Intent intent = new Intent(this, documentos.class);
+        startActivity(intent);
+    }
 
 }
 

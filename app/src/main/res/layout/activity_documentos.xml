@@ -7,4 +7,187 @@
     tools:context=".documentos"
     tools:menu="@menu/menu_incial">
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="68dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="voltar"
+        app:icon="@drawable/retornar_icon"
+        app:iconGravity="textTop"
+        app:iconSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FD0000"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Renda"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="36dp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Renda é dinheiro ou valor recebido pela venda de produtos ou serviços, realização de trabalhos ou venda de mercadorias. É um tipo de receita financeira que pode ser classificada como fonte de renda para uma pessoa ou empresa. Nem todas as contribuições em dinheiro são consideradas renda porque itens como empréstimos e salários não são obtidos por meio da venda de produtos ou serviços. Outros exemplos de renda incluem renda de investimento, renda de aluguel e acordos judiciais"
+                android:textAlignment="textStart"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FD0000"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Despesas"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="36dp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Despesa é um termo usado para designar uma despesa financeira incorrida por uma empresa, organização ou pessoa na obtenção de bens ou serviços. É uma saída de recursos financeiros em troca de algum benefício ou utilidade. As despesas podem ser classificadas em várias categorias, como despesas fixas, despesas variáveis, despesas operacionais, etc. É importante controlar as despesas para garantir a sustentabilidade financeira e evitar perdas ou passivos. O gerenciamento eficiente de despesas ajuda a maximizar os lucros e otimizar os investimentos."
+                android:textAlignment="textStart"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FD0000"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Despesas Fixas"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="36dp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Despesas fixas são despesas que ocorrem regularmente e têm um valor constante ou previsível ao longo do tempo, independentemente do volume de vendas ou produção de uma empresa. Exemplos comuns de despesas fixas incluem aluguel, salários e mão de obra, serviços públicos, seguros, encargos fixos e impostos, entre outros. Esses custos são importantes para manter a empresa à tona e geralmente não são diretamente afetados pelo desempenho financeiro da empresa. Por serem previsíveis, as despesas fixas podem ser planejadas com antecedência e incluídas no cálculo do ponto de equilíbrio de uma empresa, ajudando a determinar as vendas mínimas necessárias para cobrir todos os custos."
+                android:textAlignment="textStart"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FD0000"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Despesas Variáveis"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="36dp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Despesas variáveis são gastos que mudam de acordo com a quantidade de produção ou consumo. Isso significa que essas despesas estão diretamente relacionadas à venda ou uso de determinado produto ou serviço. Alguns exemplos de despesas variáveis incluem: comissões de vendas, matérias-primas, frete, estocagem de alimentos e bebidas, etc. As despesas variáveis são importantes para calcular o ponto de equilíbrio de uma empresa, que é o ponto em que a receita se iguala às despesas e a empresa se torna lucrativa. Uma boa gestão das despesas variáveis é fundamental para garantir a saúde financeira de um negócio."
+                android:textAlignment="textStart"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FD0000"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Rastreamento de Gastos"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="36dp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="O rastreamento de gastos pessoais é importante para que as pessoas saibam exatamente para onde está indo seu dinheiro e possam tomar decisões informadas sobre seus gastos. Isso permite que eles ajustem os gastos para economizar e atingir metas financeiras de curto e longo prazo, como economizar para emergências, investir em educação ou planejar a aposentadoria. Além disso, controlar seus gastos pessoais pode ajudá-lo a evitar o excesso de dívidas e estresse financeiro, proporcionando mais tranquilidade e estabilidade financeira."
+                android:textAlignment="textStart"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FD0000"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Orçamento Doméstico"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="36dp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="O orçamento doméstico é um instrumento financeiro utilizado para controlar as receitas e despesas de uma família ou indivíduo no local onde vivem. É uma forma de planejamento financeiro que auxilia na definição de metas e prioridades para atingir objetivos de curto, médio e longo prazo. Um orçamento doméstico dá às pessoas uma ideia de suas despesas e receitas, quanto podem economizar e identifica áreas onde podem reduzir custos. Além disso, é uma forma de evitar dívidas desnecessárias e manter a saúde financeira, proporcionando mais equilíbrio e tranquilidade em sua vida. O controle do orçamento doméstico pode ser feito por meio de planilhas, aplicativos ou softwares especializados."
+                android:textAlignment="textStart"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FD0000"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Resumo Geral"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="36dp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Renda: É o dinheiro que entra na sua casa. Pode vir de fontes como salários, investimentos, aluguel, etc. Taxas: É o dinheiro que sai da sua casa. É tudo que você tem que gastar para manter seu estilo de vida. Despesas fixas: São despesas recorrentes mensais, como aluguel, água, luz, internet, etc. Despesas Variáveis: Despesas que mudam com base no uso, como lazer, alimentação fora de casa, compras, etc. Controle de Despesas: Monitore e registre o comportamento de todas as despesas para controlar melhor suas finanças e evitar gastos desnecessários. Orçamento doméstico: Um plano para receitas e despesas domésticas elaborado para equilibrar as contas e atingir metas financeiras de longo prazo. "
+                android:textAlignment="textStart"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

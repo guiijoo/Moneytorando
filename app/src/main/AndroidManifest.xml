@@ -35,10 +35,6 @@
             android:exported="false"
             android:theme="@style/Theme.Testing" />
         <activity
-            android:name=".menu_receita"
-            android:exported="false"
-            android:label="Tela de Receitas" />
-        <activity
             android:name=".splashscreen"
             android:exported="true"
             android:theme="@style/Theme.Testing">

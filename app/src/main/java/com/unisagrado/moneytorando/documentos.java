@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class documentos extends AppCompatActivity {
 
@@ -53,4 +54,10 @@ public class documentos extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void voltar(View view)
+    {
+        onBackPressed();
+    }
+
 }

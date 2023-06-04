@@ -154,4 +154,9 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
         int id_escolha = view.getId();
         processarImagemViewClicada(id_escolha);
     }
+
+    public void voltar(View view)
+    {
+        onBackPressed();
+    }
 }
