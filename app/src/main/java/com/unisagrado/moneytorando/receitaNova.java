@@ -33,22 +33,28 @@ public class receitaNova extends AppCompatActivity {
                 String valor = valorDescontar.getText().toString();
                 float valorDescontarF = Float.parseFloat(valor);
 
+            if(valorDescontar != null)
+            {
+                Intent voltarInicial = new Intent(receitaNova.this, inicial.class);
+                float subtracaoSalario = salario - valorDescontarF;
 
-                Intent voltarInicial = new Intent(receitaNova.this,inicial.class);
-                float subtracaoSalario = salario-valorDescontarF;
-
-                if(subtracaoSalario > 0) {
+                if (subtracaoSalario >= 0) {
                     SharedPreferences.Editor edt = getSharedPreferences("preferencias", MODE_PRIVATE).edit();
                     edt.putFloat("salario", subtracaoSalario);
                     edt.apply();
                     startActivity(voltarInicial);
-                }else
-                {
+                } else {
                     AlertDialog.Builder explicar = new AlertDialog.Builder(receitaNova.this);
                     explicar.setTitle("ERRO!");
                     explicar.setMessage("Dinheiro insuficiente!");
                     explicar.create().show();
                 }
+            }else {
+                AlertDialog.Builder explicar = new AlertDialog.Builder(receitaNova.this);
+                explicar.setTitle("ERRO!");
+                explicar.setMessage("Insira um valor para continuar!");
+                explicar.create().show();
+            }
 
             }
         });

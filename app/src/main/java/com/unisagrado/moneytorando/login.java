@@ -41,10 +41,8 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SharedPreferences sharedPreferences = getSharedPreferences("preferencias", Context.MODE_PRIVATE);
-
                 String nome = editTextUsuario.getText().toString();
                 float salario = Float.parseFloat(editTextSenha.getText().toString());
-
                 Intent intent = new Intent(login.this, inicial.class);
                 SharedPreferences.Editor edt = sharedPreferences.edit();
                 edt.putString("nome", nome);
@@ -52,6 +50,7 @@ public class login extends AppCompatActivity {
                 edt.apply();
                 startActivity(intent);
             }
+
         });
 
     }

@@ -64,7 +64,7 @@ public class menu_pagamentos_escolhas extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder explicar = new AlertDialog.Builder(menu_pagamentos_escolhas.this);
                 explicar.setTitle("Explicação !");
-                explicar.setMessage("Aqui você vai escolher qual pagamento deverá quitar primeiro, cada simbolo representa taxas diferentes, escolha sabiamente qual começar!...para sair clique fora desse bloco! ");
+                explicar.setMessage("Aqui você vai escolher qual pagamento deverá quitar primeiro, cada simbolo representa taxas diferentes, escolha sabiamente qual começar!... para sair clique fora desse bloco! ");
                 explicar.create().show();
             }
         });
