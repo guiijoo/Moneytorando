@@ -42,22 +42,6 @@
         app:srcCompat="@drawable/foto_perfil" />
 
     <TextView
-        android:id="@+id/nomeUsuarioInicial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Nome Usuario"
-        android:textAlignment="center"
-        android:textColor="#FAFAFA"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/fundo_moneytorando_login4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fundo_colocador_denovo_no_principal2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
         android:id="@+id/dinheiroUsuarioAtual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

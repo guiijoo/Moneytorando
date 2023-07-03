@@ -28,13 +28,8 @@ public class inicial extends AppCompatActivity {
         setContentView(R.layout.activity_inicial);
         TextView dinheiro_usuario = findViewById(R.id.dinheiroUsuarioAtual);
 
-        TextView nomeUsuarioColetado = findViewById(R.id.nomeUsuarioInicial);
-        String usuario;
         float salario;
-
-            usuario = getSharedPreferences("preferencias", MODE_PRIVATE).getString("nome", "nome inválido");
             salario = getSharedPreferences("preferencias", MODE_PRIVATE).getFloat("salario", 000);
-            nomeUsuarioColetado.setText("Seja bem-vindo(a)," + usuario + "!");
             dinheiro_usuario.setText(String.valueOf(salario));
 
 

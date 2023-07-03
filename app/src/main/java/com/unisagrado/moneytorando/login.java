@@ -23,7 +23,6 @@ public class login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         buttonAjuda = findViewById(R.id.ajuda_login_btn);
-        editTextUsuario = findViewById(R.id.usuario_login_txt);
         editTextSenha = findViewById(R.id.usuario_senha_txt);
         buttonAvancar = findViewById(R.id.entrar_login_btn);
 
@@ -41,11 +40,9 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SharedPreferences sharedPreferences = getSharedPreferences("preferencias", Context.MODE_PRIVATE);
-                String nome = editTextUsuario.getText().toString();
                 float salario = Float.parseFloat(editTextSenha.getText().toString());
                 Intent intent = new Intent(login.this, inicial.class);
                 SharedPreferences.Editor edt = sharedPreferences.edit();
-                edt.putString("nome", nome);
                 edt.putFloat("salario", salario);
                 edt.apply();
                 startActivity(intent);

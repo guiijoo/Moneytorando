@@ -60,29 +60,10 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/usuario_login_txt"
-        android:layout_width="343dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/bordas_editadas"
-        android:cursorVisible="false"
-        android:ems="10"
-        android:fontFamily="sans-serif-smallcaps"
-        android:hint="usuario"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        android:textColor="#FF0000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fundo_moneytorando_login" />
-
-    <EditText
         android:id="@+id/usuario_senha_txt"
         android:layout_width="343dp"
         android:layout_height="44dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/bordas_editadas"
         android:cursorVisible="false"
         android:ems="10"
@@ -97,7 +78,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usuario_login_txt" />
+        app:layout_constraintTop_toBottomOf="@+id/fundo_moneytorando_login" />
 
     <Button
         android:id="@+id/ajuda_login_btn"
